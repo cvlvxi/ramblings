@@ -18,9 +18,9 @@ export default {
   mounted: function() {
     window.deck = new Reveal({});
     window.deck.initialize({
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
     });
-  },
+  }
 };
 </script>
 
