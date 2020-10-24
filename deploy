@@ -1,0 +1,19 @@
+git add .;
+git commit -m "update";
+git push origin master;
+
+git branch -D dist;
+
+git checkout -b dist;
+
+yarn build;
+
+git add .;
+
+git commit -m "update";
+
+git push -f origin dist;
+
+git checkout master;
+
+rm -rf docs;
