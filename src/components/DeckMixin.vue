@@ -5,6 +5,6 @@ export default {
       location.reload();
     }
     //window.deck?.slide(0)
-  },
+  }
 };
 </script>

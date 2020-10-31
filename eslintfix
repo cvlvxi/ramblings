@@ -1,1 +1,1 @@
-eslint --fix **/*.vue
+eslint --fix "src/**/*.vue"
