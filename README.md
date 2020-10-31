@@ -1,6 +1,4 @@
-# Coding Slide Deck
+# Ramblings
+My dumb ramblings
 
-```
-yarn install
-yarn serve
-```
+https://cvlvxi.github.io/ramblings/index.html#/
