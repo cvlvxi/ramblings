@@ -1,6 +1,6 @@
 <template>
   <div>
-    Here is something
+    Dog
   </div>
 </template>
 

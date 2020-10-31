@@ -1,31 +1,34 @@
 <template>
-  <div class="reveal">
+  <div>
+    <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark">
+      <template #header>Ramblings</template>
+
+      <template #lead>
+        Ramble: First Blog & Ramble: First Blog Part II
+      </template>
+
+      <hr class="my-4" />
+
+      <b-button v-b-toggle.sidebar-backdrop>Blogs</b-button> &nbsp;
+      <b-button :href="this.github">Github</b-button>
+
+      <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
+        <div class="px-3 py-2"></div>
+      </b-sidebar>
+    </b-jumbotron>
     <router-view />
   </div>
 </template>
 
 <script>
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css";
-import "./css/monokai.css";
-import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
-import RevealMarkdown from "reveal.js/plugin/markdown/markdown.js";
-import RevealNotes from "reveal.js/plugin/notes/notes.js";
-import Reveal from "reveal.js";
-
 export default {
   name: "App",
-  mounted: function() {
-    window.deck = new Reveal({});
-    window.deck.initialize({
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-    });
+  data() {
+    return {
+      github: "https://github.com/cvlvxi"
+    };
   }
 };
 </script>
 
-<style>
-.scalefont {
-  font-size: 65% !important;
-}
-</style>
+<style scoped></style>
