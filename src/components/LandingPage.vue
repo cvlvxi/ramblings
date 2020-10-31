@@ -1,6 +1,6 @@
 <template>
   <div class="blueback">
-    <b-jumbotron bg-variant="info" text-variant="white" border-variant="dark">
+    <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark">
       <template #header>Ramblings</template>
 
       <template #lead>
@@ -9,8 +9,11 @@
 
       <hr class="my-4" />
 
-      <b-button variant="primary" href="#">Do Something</b-button>
-      <b-button variant="success" href="#">Do Something Else</b-button>
+      <b-button v-b-toggle.sidebar-backdrop>Blogs</b-button>
+
+      <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
+        <div class="px-3 py-2"></div>
+      </b-sidebar>
     </b-jumbotron>
   </div>
 </template>
