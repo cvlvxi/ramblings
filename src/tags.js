@@ -8,5 +8,6 @@ export let tags = {
     'bioinformatics': 'primary',
     'math': 'secondary',
     'assembly': 'success',
+    'food': 'danger',
     'Show all': 'primary'
 }
