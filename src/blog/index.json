@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "2020_11_cpp_lifetimes",
+        "date": "2020 11 02",
+        "title": "This is your Life!(time)",
+        "description": "Intuition around C++ Lifetimes",
+        "tags": [
+          "c++"
+        ]
+      },
+      {
         "id": "2020_11_covid",
         "date": "2020 11 02",
         "title": "Covid Will Maketh One Blogeth",
