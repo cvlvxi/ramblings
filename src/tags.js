@@ -1,13 +1,13 @@
 export let tags = {
-    'c++': 'primary',
+    'assembly': 'success',
+    'bioinformatics': 'primary',
     'c': 'secondary',
+    'c++': 'primary',
+    'food': 'danger',
+    'logic': 'warning',
+    'math': 'secondary',
+    'other': 'info',
     'python': 'success',
     'rust': 'danger',
-    'logic': 'warning',
-    'other': 'info',
-    'bioinformatics': 'primary',
-    'math': 'secondary',
-    'assembly': 'success',
-    'food': 'danger',
     'Show all': 'primary'
 }
