@@ -14,8 +14,9 @@
 
       <hr class="my-4" />
 
-      <b-button :href="this.blog">Blog</b-button> &nbsp;
-      <b-button :href="this.github">Github</b-button>
+      <b-button :href="this.blog">Blog</b-button> &nbsp; &nbsp;
+      <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
+      <b-button :href="this.youtube">Youtube</b-button>
 
       <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
         <div class="px-3 py-2"></div>
@@ -31,7 +32,8 @@ export default {
   data() {
     return {
       github: "https://github.com/cvlvxi",
-      blog: "https://cvlvxi.github.io/ramblings"
+      blog: "https://cvlvxi.github.io/ramblings",
+      youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ"
     };
   }
 };
