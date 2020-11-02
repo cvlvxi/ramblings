@@ -45,13 +45,11 @@ Something to be aware of and will avoid the use of the following:
 
 And when you've got your code working bug free and running at the speed of bare metal....
 
-You'l look in the mirror at the age of 99 and think..
+You'll look in the mirror at the age of 99 and say to yourself..
 
 This
 
-
 IS
-
 
 YOUR
 
@@ -59,3 +57,5 @@ LIFE
 
 
 <img src="https://media.giphy.com/media/g9582DNuQppxC/source.gif"/>
+
+RIP
