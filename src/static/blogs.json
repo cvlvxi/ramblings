@@ -5,6 +5,12 @@
         "date": "2020 11 02",
         "title": "First Blog",
         "description": "Test"
+      },
+      {
+        "id": "second-blog",
+        "date": "2020 11 02",
+        "title": "Second Blog",
+        "description": "jaefwiljaeflwjlaefjwaefjlw"
       }
     ]
   }

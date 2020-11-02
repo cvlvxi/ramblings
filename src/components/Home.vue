@@ -49,7 +49,7 @@ img {
 }
 
 h2 {
-  color: #35495e;
+  color: #fff;
   text-transform: capitalize;
   margin-bottom: 2rem;
 }
@@ -62,7 +62,7 @@ h3 {
     text-decoration: underline;
   }
   .subtitle {
-    color: grey;
+    color: white;
     font-size: 0.98rem;
     float: right;
     font-weight: normal;
@@ -71,6 +71,7 @@ h3 {
 
 p {
   margin-top: 0.4rem;
+  color: white;
 }
 
 .sections {

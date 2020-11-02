@@ -6,7 +6,7 @@
 </template>
 <style lang="scss" scoped>
 .blog {
-  max-width: 800px;
+  max-width: 800pxvw;
   margin: 10rem auto;
 
   .back {
@@ -43,6 +43,11 @@
     }
     img {
       max-width: 100%;
+    }
+
+    p {
+      margin-top: 0.4rem;
+      color: white;
     }
   }
 }

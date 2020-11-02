@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div class="all">
     <b-jumbotron
       bg-variant="dark"
       text-variant="white"
       border-variant="dark"
       class="center"
     >
-
       <template #header>RAMBLINGS</template>
 
       <template #lead>
@@ -23,7 +22,9 @@
         <div class="px-3 py-2"></div>
       </b-sidebar>
     </b-jumbotron>
-    <router-view />
+    <div class="blog">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -39,8 +40,22 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .center {
   text-align: center;
+}
+.blog {
+  background-color: #54626f;
+}
+.all {
+  background-color: #1f262a;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 </style>
