@@ -103,7 +103,7 @@ p {
 }
 
 .sections {
-  padding: 10px;
+  padding: 15px;
   max-width: 600px;
   margin: 0 auto;
   margin-top: 4rem;

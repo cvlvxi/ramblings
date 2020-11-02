@@ -1,33 +1,12 @@
 {
-    "2019-08": [
-      {
-        "id": "dog",
-        "date": "2019 08 02",
-        "title": "First Blog",
-        "description": "Test",
-        "tags": [
-          "other"
-        ]
-      }
-    ],
     "2020-11": [
       {
-        "id": "first-blog",
-        "date": "2020 11 01",
-        "title": "First Blog",
-        "description": "Test",
+        "id": "2020_11_covid",
+        "date": "2020 11 02",
+        "title": "Covid Will Maketh One Blogeth",
+        "description": "The obligatory covid post",
         "tags": [
           "other"
-        ]
-      },
-      {
-        "id": "second-blog",
-        "date": "2020 11 02",
-        "title": "Second Blog",
-        "description": "jaefwiljaeflwjlaefjwaefjlw",
-        "tags": [
-          "c++",
-          "dog"
         ]
       }
     ]
