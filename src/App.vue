@@ -25,24 +25,36 @@
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
+      <b-button @click="toggleAwesome">Awesome!</b-button> 
     </b-jumbotron>
-    <router-view :selected-tag="this.selectedTag" />
+    <router-view v-if="!this.showAwesome" :selected-tag="this.selectedTag" />
+    <Awesome v-if="this.showAwesome" />
   </div>
 </template>
 
 <script>
 import { tags } from "./tags.js";
+import Awesome from "./awesome/Awesome";
 
 export default {
   name: "App",
+  components: {
+    Awesome
+  },
   data() {
     return {
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
       tagOptions: [],
       tagKeys: Object.keys(tags),
-      selectedTag: null
+      selectedTag: null,
+      showAwesome: false
     };
+  },
+  methods: {
+    toggleAwesome: function() {
+      this.showAwesome = !this.showAwesome
+    }
   }
 };
 </script>

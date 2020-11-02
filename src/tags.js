@@ -5,5 +5,7 @@ export let tags = {
     'rust': 'danger',
     'logic': 'warning',
     'other': 'info',
+    'bioinformatics': 'primary',
+    'math': 'secondary',
     'Show all': 'primary'
 }
