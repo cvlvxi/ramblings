@@ -1,13 +1,15 @@
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+
 module.exports = {
-  publicPath: ".",
+  publicPath: "/ramblings/",
+  productionSourceMap: process.env.NODE_ENV != 'production',
   outputDir: "docs",
-  // configureWebpack: {
-  //   optimization: {
-  //     splitChunks: false
-  //   }
-  // },
+  configureWebpack: {
+    optimization: {
+      splitChunks: false
+    }
+  },
   chainWebpack(config){
-    config.optimization.delete('splitChunks')
     config.module.rule('md')
       .test(/\.md/)
       .use('vue-loader')
