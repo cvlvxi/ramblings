@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? './docs/' : './',
+  publicPath: "docs",
   outputDir: "docs",
   chainWebpack(config){
     config.module.rule('md')
