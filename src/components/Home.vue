@@ -30,12 +30,18 @@
 <script>
 import BLOGENTRIES from "../blog/index.json";
 import { tags } from "../tags.js";
+import { compare } from "../utils.js";
 
 export default {
   name: "home",
   computed: {
     entries() {
-      return BLOGENTRIES;
+      // Order all the entries by date
+      let ordered_entries = {}
+      for(let k of Object.keys(BLOGENTRIES).sort((a, b) => compare(a, b))) {
+        ordered_entries[k] = BLOGENTRIES[k].sort((a, b) => compare(a.date, b.date))
+      }
+      return ordered_entries;
     }
   },
   data() {

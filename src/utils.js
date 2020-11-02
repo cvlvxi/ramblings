@@ -18,3 +18,11 @@ export function range(start, end, padding = 2) {
   }
   return ans;
 }
+
+export function compare(a,b) {
+  if (a > b )
+    return -1;
+  if (a  < b )
+   return 1;
+  return 0;
+}
