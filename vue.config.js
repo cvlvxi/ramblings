@@ -1,6 +1,11 @@
 module.exports = {
-  publicPath: "docs",
+  publicPath: ".",
   outputDir: "docs",
+  configureWebpack: {
+    optimization: {
+      splitChunks: false
+    }
+  },
   chainWebpack(config){
     config.module.rule('md')
       .test(/\.md/)
