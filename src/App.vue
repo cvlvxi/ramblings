@@ -16,7 +16,7 @@
 
       <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube">Youtube</b-button>
+      <b-button :href="this.youtube">Youtube</b-button> &nbsp;
       <b-dropdown id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item v-for="tagKey in tagKeys" :key="tagKey"
           >{{ tagKey }}
