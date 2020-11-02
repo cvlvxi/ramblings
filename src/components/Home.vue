@@ -74,7 +74,7 @@ p {
 }
 
 .sections {
-  max-width: 40vw;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 4rem;
 }

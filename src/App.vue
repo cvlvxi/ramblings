@@ -6,7 +6,8 @@
       border-variant="dark"
       class="center"
     >
-      <template #header>Ramblings</template>
+
+      <template #header>RAMBLINGS</template>
 
       <template #lead>
         Ramble: First Blog & Ramble: First Blog Part II
@@ -14,7 +15,7 @@
 
       <hr class="my-4" />
 
-      <b-button :href="this.blog">Blog</b-button> &nbsp; &nbsp;
+      <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
       <b-button :href="this.youtube">Youtube</b-button>
 
@@ -32,7 +33,6 @@ export default {
   data() {
     return {
       github: "https://github.com/cvlvxi",
-      blog: "https://cvlvxi.github.io/ramblings",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ"
     };
   }
