@@ -5,6 +5,11 @@
   </div>
 </template>
 <style lang="scss" scoped>
+@media screen and (min-width: 1200px) {
+  .blog {
+    max-width: 1000px !important;
+  }
+}
 .blog {
   max-width: 600px;
   padding: 15px;
