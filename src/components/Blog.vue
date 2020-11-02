@@ -7,6 +7,7 @@
 <style lang="scss" scoped>
 .blog {
   max-width: 600px;
+  padding: 10px;
   margin: 10rem auto;
   color: white;
 
