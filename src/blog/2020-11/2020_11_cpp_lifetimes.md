@@ -4,7 +4,9 @@ Remember that show with that old man interviewing another old person?
 
 <img src="https://i.ytimg.com/vi/CRTArZ2nnI8/hqdefault.jpg">
 
-Well mate, just like that show C++ has a way of confusing the hell out of someone. By forcing them to think about the concept of lifetimes with very little help unlike a language like `rust` which has these concepts baked into the compiler and will give you nice warnings. 
+Well mate, just like that show C++ has a way of confusing the hell out of someone. 
+
+How? By forcing them to think about the concept of lifetimes with very little help unlike a language like `rust` which has these concepts baked into the compiler and will give you nice warnings. 
 
 Something to be super careful of is when dealing with ref or pointers and assigning them to something is be aware of when that something will be destroyed. 
 
