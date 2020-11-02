@@ -1,8 +1,8 @@
 # This is your Life!(time)
 
-Remember that show with the old man interviewing another old person?
+Remember that show with that old man interviewing another old person?
 
-<img src="https://i2.wp.com/tvtonight.com.au/wp-content/uploads/mike-munro.jpg?resize=290%2C200/">
+<img src="https://i.ytimg.com/vi/CRTArZ2nnI8/hqdefault.jpg">
 
 Well mate, just like that show C++ has a way of confusing the hell out of someone. By forcing them to think about the concept of lifetimes with very little help unlike a language like `rust` which has these concepts baked into the compiler and will give you nice warnings. 
 
@@ -43,4 +43,19 @@ Something to be aware of and will avoid the use of the following:
 <img src="https://i.pinimg.com/originals/83/5b/2b/835b2b1227522dc6467761fb904d1a34.jpg"/>
 
 
+And when you've got your code working bug free and running at the speed of bare metal....
 
+You'l look in the mirror at the age of 99 and think..
+
+This
+
+
+IS
+
+
+YOUR
+
+LIFE
+
+
+<img src="https://media.giphy.com/media/g9582DNuQppxC/source.gif"/>
