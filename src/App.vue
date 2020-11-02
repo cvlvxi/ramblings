@@ -14,8 +14,8 @@
 
       <hr class="my-4" />
 
-      <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube">Youtube</b-button> <br/>
+      <b-button :href="this.github">Github</b-button> &nbsp; &nbsp; 
+      <b-button :href="this.youtube">Youtube</b-button> <br/><br/>
       <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
