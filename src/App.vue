@@ -9,7 +9,7 @@
       <template #header>RAMBLINGS</template>
 
       <template #lead>
-        Ramble: First Blog & Ramble: First Blog Part II
+        Ramble: First Blog Part <span style="color: red">II</span>
       </template>
 
       <hr class="my-4" />
