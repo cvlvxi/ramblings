@@ -32,7 +32,7 @@ We're assinging it to a `const string&` but we know that .substr will return an 
 
 This however will cause the default constructor for string to be used for `string` and it may have implemented a move from the rvalue return from .substr of copy it it.
 
-Something to be aware of and will avoid one doing the following:
+Something to be aware of and will avoid the use of the following:
 
 <img src="https://i.pinimg.com/originals/83/5b/2b/835b2b1227522dc6467761fb904d1a34.jpg"/>
 
