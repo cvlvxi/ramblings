@@ -23,9 +23,6 @@
         </b-dropdown-item>
       </b-dropdown>
 
-      <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
-        <div class="px-3 py-2"></div>
-      </b-sidebar>
     </b-jumbotron>
     <router-view />
   </div>
