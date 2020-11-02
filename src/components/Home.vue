@@ -11,7 +11,13 @@
           <div class="entry">
             <h3 @click="$router.push({ name: entry.id })">
               {{ entry.title }}
-              <span class="subtitle">{{ entry.date }}</span>
+              <span class="subtitle">{{ entry.date }}</span
+              ><br />
+              <div v-for="tag in entry.tags" :key="tag">
+                <b-badge class="subtitle" pill :variant="tagObj[tag]"
+                  >{{ tag }}
+                </b-badge>
+              </div>
             </h3>
             <p>{{ entry.description }}</p>
           </div>
@@ -22,7 +28,8 @@
 </template>
 
 <script>
-import BLOGENTRIES from "../static/blogs.json";
+import BLOGENTRIES from "../blog/index.json";
+import { tags } from "../tags.js";
 
 export default {
   name: "home",
@@ -30,6 +37,11 @@ export default {
     entries() {
       return BLOGENTRIES;
     }
+  },
+  data() {
+    return {
+      tagObj: tags
+    };
   }
 };
 </script>

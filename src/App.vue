@@ -17,6 +17,11 @@
       <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
       <b-button :href="this.youtube">Youtube</b-button>
+      <b-dropdown id="dropdown-1" text="Tags" class="m-md-2">
+        <b-dropdown-item v-for="tagKey in tagKeys" :key="tagKey"
+          >{{ tagKey }}
+        </b-dropdown-item>
+      </b-dropdown>
 
       <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
         <div class="px-3 py-2"></div>
@@ -27,12 +32,15 @@
 </template>
 
 <script>
+import { tags } from "./tags.js";
+
 export default {
   name: "App",
   data() {
     return {
       github: "https://github.com/cvlvxi",
-      youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ"
+      youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
+      tagKeys: Object.keys(tags)
     };
   }
 };

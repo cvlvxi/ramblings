@@ -4,13 +4,20 @@
         "id": "first-blog",
         "date": "2020 11 02",
         "title": "First Blog",
-        "description": "Test"
+        "description": "Test",
+        "tags": [
+          "other"
+        ]
       },
       {
         "id": "second-blog",
         "date": "2020 11 02",
         "title": "Second Blog",
-        "description": "jaefwiljaeflwjlaefjwaefjlw"
+        "description": "jaefwiljaeflwjlaefjwaefjlw",
+        "tags": [
+          "c++",
+          "dog"
+        ]
       }
     ]
   }
