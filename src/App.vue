@@ -1,6 +1,11 @@
 <template>
   <div>
-    <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark">
+    <b-jumbotron
+      bg-variant="dark"
+      text-variant="white"
+      border-variant="dark"
+      class="center"
+    >
       <template #header>Ramblings</template>
 
       <template #lead>
@@ -9,7 +14,7 @@
 
       <hr class="my-4" />
 
-      <b-button v-b-toggle.sidebar-backdrop>Blogs</b-button> &nbsp;
+      <b-button :href="this.blog">Blog</b-button> &nbsp;
       <b-button :href="this.github">Github</b-button>
 
       <b-sidebar id="sidebar-backdrop" :backdrop-variant="dark" backdrop shadow>
@@ -25,10 +30,15 @@ export default {
   name: "App",
   data() {
     return {
-      github: "https://github.com/cvlvxi"
+      github: "https://github.com/cvlvxi",
+      blog: "https://cvlvxi.github.io/ramblings"
     };
   }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.center {
+  text-align: center;
+}
+</style>
