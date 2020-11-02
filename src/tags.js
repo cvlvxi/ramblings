@@ -7,5 +7,6 @@ export let tags = {
     'other': 'info',
     'bioinformatics': 'primary',
     'math': 'secondary',
+    'assembly': 'success',
     'Show all': 'primary'
 }
