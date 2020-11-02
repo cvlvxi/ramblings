@@ -1,5 +1,11 @@
 # This is your Life!(time)
 
+Remember that show with the old man interviewing another old person?
+
+<img src="https://i2.wp.com/tvtonight.com.au/wp-content/uploads/mike-munro.jpg?resize=290%2C200/">
+
+Well mate, just like that show C++ has a way of confusing the hell out of someone. By forcing them to think about the concept of lifetimes with very little help unlike a language like `rust` which has these concepts baked into the compiler and will give you nice warnings. 
+
 Something to be super careful of is when dealing with ref or pointers and assigning them to something is be aware of when that something will be destroyed. 
 
 
