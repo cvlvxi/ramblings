@@ -4,5 +4,6 @@ export let tags = {
     'python': 'success',
     'rust': 'danger',
     'logic': 'warning',
-    'other': 'info'
+    'other': 'info',
+    'Show all': 'primary'
 }

@@ -34,14 +34,22 @@ import { compare } from "../utils.js";
 
 export default {
   name: "home",
+  props: ["selectedTag"],
   computed: {
     entries() {
       // Order all the entries by date
+      console.log(this.selectedTag);
       let ordered_entries = {};
       for (let k of Object.keys(BLOGENTRIES).sort((a, b) => compare(a, b))) {
-        ordered_entries[k] = BLOGENTRIES[k].sort((a, b) =>
-          compare(a.date, b.date)
-        );
+        if (this.selectedTag === null || this.selectedTag === "Show all") {
+          ordered_entries[k] = BLOGENTRIES[k].sort((a, b) =>
+            compare(a.date, b.date)
+          );
+        } else {
+          ordered_entries[k] = BLOGENTRIES[k]
+            .filter(x => x.tags.includes(this.selectedTag))
+            .sort((a, b) => compare(a, b));
+        }
       }
       return ordered_entries;
     }

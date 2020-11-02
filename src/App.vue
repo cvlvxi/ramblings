@@ -17,14 +17,16 @@
       <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
       <b-button :href="this.youtube">Youtube</b-button> &nbsp;
-      <b-dropdown id="dropdown-1" text="Tags" class="m-md-2">
-        <b-dropdown-item v-for="tagKey in tagKeys" :key="tagKey"
+      <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
+        <b-dropdown-item
+          @click="selectedTag = tagKey"
+          v-for="tagKey in tagKeys"
+          :key="tagKey"
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
-
     </b-jumbotron>
-    <router-view />
+    <router-view :selected-tag="this.selectedTag" />
   </div>
 </template>
 
@@ -37,7 +39,9 @@ export default {
     return {
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
-      tagKeys: Object.keys(tags)
+      tagOptions: [],
+      tagKeys: Object.keys(tags),
+      selectedTag: null
     };
   }
 };
