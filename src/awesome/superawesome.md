@@ -13,7 +13,7 @@
 	numbering=false
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># Superawesome Awesome! 
+<!-- /vscode-markdown-toc -->
 
 
 ## <a name='C'></a>C++
