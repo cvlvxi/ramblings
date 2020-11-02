@@ -6,8 +6,9 @@
 </template>
 <style lang="scss" scoped>
 .blog {
-  max-width: 800pxvw;
+  max-width: 800px;
   margin: 10rem auto;
+  color: white;
 
   .back {
     background-color: #42b883;
@@ -32,7 +33,7 @@
     }
     h4 {
       margin-bottom: 3rem;
-      color: #35495e;
+      color: #fff;
     }
     pre {
       overflow-x: auto;

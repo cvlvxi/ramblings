@@ -22,9 +22,7 @@
         <div class="px-3 py-2"></div>
       </b-sidebar>
     </b-jumbotron>
-    <div class="blog">
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 
@@ -44,11 +42,9 @@ export default {
 .center {
   text-align: center;
 }
-.blog {
-  background-color: #54626f;
-}
+
 .all {
-  background-color: #1f262a;
+  background-color: #1a1110;
   height: 100%;
 }
 body {
