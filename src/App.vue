@@ -14,9 +14,9 @@
 
       <hr class="my-4" />
 
-      <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube">Youtube</b-button> &nbsp;
+      <b-button :href="this.youtube">Youtube</b-button> <br/>
+      <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
@@ -24,7 +24,7 @@
           :key="tagKey"
           >{{ tagKey }}
         </b-dropdown-item>
-      </b-dropdown>
+      </b-dropdown> &nbsp;
       <b-button @click="toggleAwesome">Awesome!</b-button> 
     </b-jumbotron>
     <router-view v-if="!this.showAwesome" :selected-tag="this.selectedTag" />
