@@ -1,6 +1,6 @@
 <template>
   <div class="blog">
-      <SuperAwesome/>
+    <SuperAwesome />
   </div>
 </template>
 <script>
@@ -10,7 +10,7 @@ export default {
   components: {
     SuperAwesome
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .blog {

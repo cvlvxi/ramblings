@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "2020_11_ass_1",
+        "date": "2020 11 02",
+        "title": "Back to the Assembler (Part I)",
+        "description": "1.21 Giga WTFS?",
+        "tags": [
+          "assembly"
+        ]
+      },
+      {
         "id": "2020_11_cpp_lifetimes",
         "date": "2020 11 02",
         "title": "This is your Life!(time)",
