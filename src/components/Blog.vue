@@ -14,7 +14,8 @@ import "prismjs/components/prism-cpp";
 import "prismjs/components/prism-nasm";
 Prism.highlightAll();
 
-export default {};
+export default {
+};
 </script>
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {

@@ -35,6 +35,8 @@ import { compare } from "../utils.js";
 export default {
   name: "home",
   props: ["selectedTag"],
+  mounted() {
+  },
   computed: {
     entries() {
       // Order all the entries by date
