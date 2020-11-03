@@ -1,5 +1,10 @@
 # This is your Life!(time)
 
+```python
+def dog():
+    pass
+```
+
 Remember that show with that old man interviewing another old person?
 
 <img src="https://i.ytimg.com/vi/CRTArZ2nnI8/hqdefault.jpg">

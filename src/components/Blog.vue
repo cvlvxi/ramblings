@@ -4,6 +4,16 @@
     <router-link to="/" tag="a" class="back">&laquo; Back</router-link>
   </div>
 </template>
+<script>
+import Prism from "prismjs";
+import "prismjs/themes/prism-twilight.css";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-rust";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
+Prism.highlightAll();
+export default {};
+</script>
 <style lang="scss" scoped>
 @media screen and (min-width: 1200px) {
   .blog {
