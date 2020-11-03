@@ -1,7 +1,7 @@
 {
     "2020-11": [
       {
-        "id": "2020_11_stocks1",
+        "id": "other/2020_11_stocks1",
         "date": "2020 11 03",
         "title": "Stock Market Simulation",
         "description": "Equity, Liquidity and other forms of Stupidity",
@@ -10,7 +10,7 @@
         ]
       },
       {
-        "id": "2020_11_netflix1",
+        "id": "movies/2020_11_netflix1",
         "date": "2020 11 03",
         "title": "Recap: Annihilation (2018)",
         "description": "An exercise in nihilism",
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "id": "2020_11_food1",
+        "id": "food/2020_11_food1",
         "date": "2020 11 03",
         "title": "Delicacies Delicioso I",
         "description": "sudo yum install cha",
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "id": "2020_11_ass_1",
+        "id": "assembly/2020_11_ass_1",
         "date": "2020 11 02",
         "title": "Back to the Assembler (Part I)",
         "description": "1.21 Giga WTFS?",
@@ -38,7 +38,7 @@
         ]
       },
       {
-        "id": "2020_11_cpp_lifetimes",
+        "id": "cpp/2020_11_cpp_lifetimes",
         "date": "2020 11 02",
         "title": "This is your Life!(time)",
         "description": "Intuition around C++ Lifetimes & refs & ptrs",
@@ -47,7 +47,7 @@
         ]
       },
       {
-        "id": "2020_11_covid",
+        "id": "other/2020_11_covid",
         "date": "2020 11 02",
         "title": "Covid Will Maketh One Blogeth",
         "description": "The obligatory covid post",

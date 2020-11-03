@@ -6,8 +6,13 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import hljs from 'highlight.js';
+import mermaid from 'mermaid';
 
 hljs;
+
+mermaid.initialize({
+  startOnLoad: true
+});
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)

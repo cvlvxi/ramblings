@@ -31,12 +31,9 @@
 import { BlogEntries } from "../blog/blog.js";
 import { tags } from "../tags.js";
 import { compare } from "../utils.js";
-
 export default {
   name: "home",
   props: ["selectedTag"],
-  mounted() {
-  },
   computed: {
     entries() {
       // Order all the entries by date

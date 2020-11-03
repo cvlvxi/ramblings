@@ -37,8 +37,7 @@ import { tags } from "./tags.js";
 
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
   data() {
     return {
       github: "https://github.com/cvlvxi",
