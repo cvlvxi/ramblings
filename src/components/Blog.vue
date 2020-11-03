@@ -12,6 +12,7 @@ import "prismjs/components/prism-rust";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
 Prism.highlightAll();
+
 export default {};
 </script>
 <style lang="scss" scoped>

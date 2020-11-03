@@ -20,7 +20,7 @@ Given that we are using a `const char&` we need to be sure that the `operator []
 
 
 ```c++
-const char head_b = string[0]; 
+const char head_b = string_b[0]; 
 ```
 
 This actually may be better given its just a char and no need to go indirectly via addresses 
