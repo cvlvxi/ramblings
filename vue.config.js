@@ -11,14 +11,18 @@ module.exports = {
   },
   chainWebpack(config){
     config.module.rule('md')
-      .test(/\.md/)
-      .use('vue-loader')
-      .loader('vue-loader')
-      .end()
-      .use('vue-markdown-loader')
-      .loader('vue-markdown-loader/lib/markdown-compiler')
-      .options({
-        raw: true
-      })
+    .test(/\.md/)
+    .use('vue-loader')
+    .loader('vue-loader')
+    .end()
+    .use('vue-markdown-loader-compiler')
+    .loader('vue-markdown-loader/lib/markdown-compiler')
+    .options({
+      raw: true,
+      use: [
+        [require("markdown-it-mermaid")]
+      ]
+    })
+    .end()
   }
 };
