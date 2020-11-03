@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "2020_11_netflix1",
+        "date": "2020 11 03",
+        "title": "Review of Annihilation",
+        "description": "An exercise in nihilism",
+        "tags": [
+          "movies"
+        ]
+      },
+      {
         "id": "2020_11_food1",
         "date": "2020 11 03",
         "title": "Delicacies Delicioso I",

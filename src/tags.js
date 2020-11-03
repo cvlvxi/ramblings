@@ -6,6 +6,7 @@ export let tags = {
     'food': 'danger',
     'logic': 'warning',
     'math': 'secondary',
+    'movies': 'info',
     'other': 'info',
     'python': 'success',
     'rust': 'danger',
