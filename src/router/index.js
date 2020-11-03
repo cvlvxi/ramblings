@@ -4,7 +4,7 @@ import Home from '../components/Home.vue'
 
 Vue.use(Router)
 
-import BlogEntries from '../blog/index.json';
+import { BlogEntries } from '../blog/blog.js';
 
 const blogRoutes = Object.keys(BlogEntries).map(section => {
   const children = BlogEntries[section].map(child => ({

@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import BLOGENTRIES from "../blog/index.json";
+import { BlogEntries } from "../blog/blog.js";
 import { tags } from "../tags.js";
 import { compare } from "../utils.js";
 
@@ -40,13 +40,13 @@ export default {
       // Order all the entries by date
       console.log(this.selectedTag);
       let ordered_entries = {};
-      for (let k of Object.keys(BLOGENTRIES).sort((a, b) => compare(a, b))) {
+      for (let k of Object.keys(BlogEntries).sort((a, b) => compare(a, b))) {
         if (this.selectedTag === null || this.selectedTag === "Show all") {
-          ordered_entries[k] = BLOGENTRIES[k].sort((a, b) =>
+          ordered_entries[k] = BlogEntries[k].sort((a, b) =>
             compare(a.date, b.date)
           );
         } else {
-          ordered_entries[k] = BLOGENTRIES[k]
+          ordered_entries[k] = BlogEntries[k]
             .filter(x => x.tags.includes(this.selectedTag))
             .sort((a, b) => compare(a, b));
         }
