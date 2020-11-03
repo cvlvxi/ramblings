@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "2020_11_stocks1",
+        "date": "2020 11 03",
+        "title": "Stock Market Simulation",
+        "description": "Equity, Liquidity and other forms of Stupidity",
+        "tags": [
+          "other"
+        ]
+      },
+      {
         "id": "2020_11_netflix1",
         "date": "2020 11 03",
         "title": "Review of Annihilation",

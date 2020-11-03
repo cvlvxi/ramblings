@@ -1,4 +1,5 @@
 export let tags = {
+    'Show all': 'primary',
     'assembly': 'success',
     'bioinformatics': 'primary',
     'c': 'secondary',
@@ -10,5 +11,4 @@ export let tags = {
     'other': 'info',
     'python': 'success',
     'rust': 'danger',
-    'Show all': 'primary'
 }
