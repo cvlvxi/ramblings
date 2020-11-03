@@ -2,8 +2,14 @@
 
 <!-- vscode-markdown-toc -->
 * [C++](#C)
+	* [Alternative Std Libs](#AlternativeStdLibs)
+	* [Package Management](#PackageManagement)
+	* [Static Analysis](#StaticAnalysis)
+	* [CLI](#CLI)
+	* [Other](#Other)
 	* [Parallel/Async](#ParallelAsync)
 * [Algorithms](#Algorithms)
+	* [String Match](#StringMatch)
 * [Bioinformatics](#Bioinformatics)
 * [Python](#Python)
 * [Rust](#Rust)
@@ -17,12 +23,24 @@
 
 
 ## <a name='C'></a>C++
+
+
+### <a name='AlternativeStdLibs'></a>Alternative Std Libs
 - [Bazel](https://docs.bazel.build/versions/master/tutorial/cpp.html)
-- [Google Style Guide](https://google.github.io/styleguide/cppguide.html#Designated_initializers)
+- [Folly](https://github.com/facebook/folly)
+
+### <a name='PackageManagement'></a>Package Management
 - [vcpkg](https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019)
-- [Quantlib](https://www.quantlib.org/docs.shtml)
-- [Lyra CLI](https://bfgroup.github.io/Lyra/lyra.html)
+
+### <a name='StaticAnalysis'></a>Static Analysis
 - [ccls: Clangd alternative](https://github.com/MaskRay/ccls)
+
+### <a name='CLI'></a>CLI
+- [Lyra CLI](https://bfgroup.github.io/Lyra/lyra.html)
+
+### <a name='Other'></a>Other
+- [Google Style Guide](https://google.github.io/styleguide/cppguide.html#Designated_initializers)
+- [Quantlib](https://www.quantlib.org/docs.shtml)
 - [type_traits.h](https://en.cppreference.com/w/cpp/header/type_traits)
 - [STX: Result type](https://github.com/lamarrr/STX)
 
@@ -30,7 +48,12 @@
 - [taskflow](https://github.com/taskflow/taskflow)
 - [Thread Building Blocks (Intel)](https://github.com/oneapi-src/oneTBB)
 
+
+-----------------------------------------------------------
+
 ## <a name='Algorithms'></a>Algorithms 
+
+### <a name='StringMatch'></a>String Match
 - [Fast bit vector algorithm for string match](http://www.gersteinlab.org/courses/452/09-spring/pdf/Myers.pdf)
 
 
