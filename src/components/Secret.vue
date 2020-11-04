@@ -11,7 +11,7 @@ export default {
   computed: {
       days_since_stopping() {
           let d1 = Date.now();
-          let d2 = new Date('11/03/2020');
+          let d2 = new Date('11/04/2020');
           let dayDiff = Math.floor((d1 - d2)  / (1000 * 3600 * 24));
           let stopStr = `Days since Stopping: ${dayDiff} days`
           return stopStr
