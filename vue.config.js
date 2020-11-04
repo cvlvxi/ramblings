@@ -20,7 +20,6 @@ module.exports = {
     .options({
       raw: true,
       use: [
-        [require("markdown-it-mermaid")]
       ]
     })
     .end()

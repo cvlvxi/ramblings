@@ -5,10 +5,11 @@ import { range } from "./utils.js";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import hljs from 'highlight.js';
 import mermaid from 'mermaid';
+import hljs from 'highlight.js';
+import hljsDefineVue from 'highlightjs-vue';
 
-hljs;
+hljsDefineVue(hljs);
 
 mermaid.initialize({
   startOnLoad: true
