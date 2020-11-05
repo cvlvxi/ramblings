@@ -4,6 +4,7 @@ export let tags = {
     'bioinformatics': 'primary',
     'c': 'secondary',
     'c++': 'primary',
+    'cmake': 'danger',
     'food': 'danger',
     'logic': 'warning',
     'math': 'secondary',
