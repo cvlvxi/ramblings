@@ -67,6 +67,11 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width: 1200px) {
+  .blog {
+    max-width: 1000px !important;
+  }
+}
 .center {
   text-align: center;
 }
