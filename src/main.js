@@ -14,6 +14,10 @@ import "prismjs/components/prism-rust";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
 import "prismjs/components/prism-nasm";
+import "prismjs/components/prism-cmake";
+import "prismjs/components/prism-makefile";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-json";
 
 
 
