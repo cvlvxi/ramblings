@@ -5,7 +5,7 @@ export let tags = {
     'c': 'secondary',
     'c++': 'primary',
     'cmake': 'danger',
-    'food': 'danger',
+    'food': 'warning',
     'logic': 'warning',
     'lldb': 'info',
     'math': 'secondary',
@@ -13,4 +13,5 @@ export let tags = {
     'other': 'info',
     'python': 'success',
     'rust': 'danger',
+    'shortstory': 'success'
 }

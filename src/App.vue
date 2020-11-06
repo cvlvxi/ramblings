@@ -1,14 +1,16 @@
 <template>
   <div class="all">
     <b-jumbotron
+      header=""
+      header-tag=""
       bg-variant="dark"
       text-variant="white"
       border-variant="dark"
       class="center"
     >
-      <template #header>RAMBLINGS</template>
+      <h1> RAMBLINGS </h1>
 
-      <template #lead>
+      <template>
         Ramble: First Blog Part <span style="color: red">II</span>
       </template>
 
