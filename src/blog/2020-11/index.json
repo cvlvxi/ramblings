@@ -3,7 +3,7 @@
       {
         "id": "cpp/2020_11_imtui",
         "date": "2020 11 06",
-        "title": "imtui (you're)tui EVERYBODY's tui",
+        "title": "Exploring imtui",
         "description": "Exploration of the imtui framework for C++",
         "tags": [
           "c++"
@@ -12,7 +12,7 @@
       {
         "id": "lldb/2020_11_lldb1",
         "date": "2020 11 06",
-        "title": "LLCOOLJ <3 LLDB!",
+        "title": "LLcoolj ❤️ lldb!",
         "description": "If he was a programmer",
         "tags": [
           "lldb"
