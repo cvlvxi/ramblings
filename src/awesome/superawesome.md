@@ -1,4 +1,5 @@
 <!-- vscode-markdown-toc -->
+* [Awesome Lists](#AwesomeLists)
 * [C++](#C)
 	* [Alternative Std Libs](#AlternativeStdLibs)
 	* [Package Management](#PackageManagement)
@@ -10,9 +11,13 @@
 * [Algorithms](#Algorithms)
 	* [String Match](#StringMatch)
 * [Bioinformatics](#Bioinformatics)
+* [Javscript](#Javscript)
+	* [Visualization](#Visualization)
+* [Groovy](#Groovy)
 * [Python](#Python)
 * [Rust](#Rust)
 * [Music](#Music)
+* [Postcasts](#Postcasts)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -20,6 +25,10 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
+## <a name='AwesomeLists'></a>Awesome Lists
+- [Awesome CheatSheets](https://github.com/detailyang/awesome-cheatsheet#platforms)
+
+-----------------------------------------------------------
 
 ## <a name='C'></a>C++
 
@@ -67,6 +76,19 @@
 - [Whatshap](https://whatshap.readthedocs.io/en/latest/develop.html)
 - [Seq](https://docs.seq-lang.org/)
 - [OpenGene](https://github.com/OpenGene)
+- [Groovy NGS Utils](https://github.com/ssadedin/groovy-ngs-utils)
+
+-----------------------------------------------------------
+
+## <a name='Javscript'></a>Javscript
+### <a name='Visualization'></a>Visualization
+- [D3 Examples 1](https://bl.ocks.org/mbostock)
+
+
+-----------------------------------------------------------
+
+## <a name='Groovy'></a>Groovy
+- [Mr Hakis Groovy Blog](https://blog.mrhaki.com/)
 
 -----------------------------------------------------------
 
@@ -87,7 +109,7 @@
 
 -----------------------------------------------------------
 
-## Postcasts
+## <a name='Postcasts'></a>Postcasts
 - [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
 - [Sam Harris - Waking up](https://wakingup.com/)
 - [Jay Oakerson & Dan Soder - The Bonfire](http://www.cc.com/shows/bonfire)
