@@ -7343,7 +7343,7 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
-prismjs@^1.22.0:
+prismjs@^1.22.0, prismjs@^1.6.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
   integrity sha512-lLJ/Wt9yy0AiSYBf212kK3mM5L8ycwlyTlSxHBAneXLR0nzFMlZ5y7riFPF3E33zXOF2IH95xdY5jIyZbM9z/w==
@@ -9162,6 +9162,13 @@ vue-markdown-loader@^2.4.1:
     highlight.js "^9.4.0"
     loader-utils "^1.1.0"
     markdown-it "^8.4.0"
+
+vue-prism@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vue-prism/-/vue-prism-1.0.5.tgz#6e7777adb2fa11c0a8cb99e0265112a105549550"
+  integrity sha1-bnd3rbL6EcCoy5ngJlESoQVUlVA=
+  dependencies:
+    prismjs "^1.6.0"
 
 vue-router@^3.2.0:
   version "3.4.3"

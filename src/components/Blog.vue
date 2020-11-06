@@ -5,15 +5,6 @@
   </div>
 </template>
 <script>
-import Prism from "prismjs";
-import "prismjs/themes/prism-twilight.css";
-import "prismjs/components/prism-python";
-import "prismjs/components/prism-rust";
-import "prismjs/components/prism-c";
-import "prismjs/components/prism-cpp";
-import "prismjs/components/prism-nasm";
-Prism.highlightAll();
-
 export default {};
 </script>
 <style lang="scss" scoped>
