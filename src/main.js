@@ -8,7 +8,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VuePrism from 'vue-prism'
 Vue.use(VuePrism)
 
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/themes/prism-okaidia.css'
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-rust";
 import "prismjs/components/prism-c";
