@@ -84,3 +84,15 @@
 
 ## <a name='Music'></a>Music
 - [The best song ever](https://www.youtube.com/watch?v=7lhJ0LZtv3w&feature=youtu.be)
+
+-----------------------------------------------------------
+
+## Postcasts
+- [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
+- [Sam Harris - Waking up](https://wakingup.com/)
+- [Jay Oakerson & Dan Soder - The Bonfire](http://www.cc.com/shows/bonfire)
+- [Darknet Diaries](https://darknetdiaries.com/)
+- [Risky Business](https://risky.biz/)
+- [Preet Bhahara - Stay Tuned](https://cafe.com/stay-tuned-podcast/)
+- [Motherboard - CYBER](https://play.acast.com/s/cyber)
+- [Zachtronics Podcast](http://www.zachtronics.com/podcast/)
