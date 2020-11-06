@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_imtui",
+        "date": "2020 11 06",
+        "title": "imtui urtui everybody is tui",
+        "description": "Exploration of the imtui framework for C++",
+        "tags": [
+          "c++"
+        ]
+      },
+      {
         "id": "lldb/2020_11_lldb1",
         "date": "2020 11 06",
         "title": "LLCOOLJ <3 LLDB!",
