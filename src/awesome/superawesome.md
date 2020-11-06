@@ -1,5 +1,3 @@
-# Superawesome Awesome!
-
 <!-- vscode-markdown-toc -->
 * [C++](#C)
 	* [Alternative Std Libs](#AlternativeStdLibs)
@@ -8,6 +6,7 @@
 	* [CLI](#CLI)
 	* [Other](#Other)
 	* [Parallel/Async](#ParallelAsync)
+	* [Cmake](#Cmake)
 * [Algorithms](#Algorithms)
 	* [String Match](#StringMatch)
 * [Bioinformatics](#Bioinformatics)
@@ -48,6 +47,11 @@
 - [taskflow](https://github.com/taskflow/taskflow)
 - [Thread Building Blocks (Intel)](https://github.com/oneapi-src/oneTBB)
 
+### <a name='Cmake'></a>Cmake
+- [Advanced Levelization Techniques p 1](https://www.youtube.com/watch?v=QjFpKJ8Xx78)
+- [Using modern cmake patterns to enforce good modular design](https://www.youtube.com/watch?v=eC9-iRN2b04)
+- [Effective CMake](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
+
 
 -----------------------------------------------------------
 
@@ -56,18 +60,27 @@
 ### <a name='StringMatch'></a>String Match
 - [Fast bit vector algorithm for string match](http://www.gersteinlab.org/courses/452/09-spring/pdf/Myers.pdf)
 
+-----------------------------------------------------------
+
 
 ## <a name='Bioinformatics'></a>Bioinformatics 
 - [Whatshap](https://whatshap.readthedocs.io/en/latest/develop.html)
 - [Seq](https://docs.seq-lang.org/)
 - [OpenGene](https://github.com/OpenGene)
 
+-----------------------------------------------------------
+
 ## <a name='Python'></a>Python
 - [Python vs Cython vs C](https://notes-on-cython.readthedocs.io/en/latest/std_dev.html)
 
 
+-----------------------------------------------------------
+
+
 ## <a name='Rust'></a>Rust
 - [Bevy: Game Engine](https://bevyengine.org/learn/book/introduction/)
+
+-----------------------------------------------------------
 
 ## <a name='Music'></a>Music
 - [The best song ever](https://www.youtube.com/watch?v=7lhJ0LZtv3w&feature=youtu.be)
