@@ -1,15 +1,6 @@
 {
     "2020-11": [
       {
-        "id": "shortstory/2020_11_ladder_moon_maow",
-        "date": "2020 11 07",
-        "title": "MoonmaoW",
-        "description": "A shortstory about moonmaow",
-        "tags": [
-          "shortstory"
-        ]
-      },
-      {
         "id": "cpp/2020_11_imtui",
         "date": "2020 11 06",
         "title": "Exploring imtui",

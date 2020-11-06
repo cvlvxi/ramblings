@@ -8,7 +8,7 @@
       border-variant="dark"
       class="center"
     >
-      <h1> RAMBLINGS </h1>
+      <h1>RAMBLINGS</h1>
 
       <template>
         Ramble: First Blog Part <span style="color: red">II</span>
