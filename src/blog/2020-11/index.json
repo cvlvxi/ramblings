@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "lldb/2020_11_lldb1",
+        "date": "2020 11 06",
+        "title": "LLCOOLJ <3 LLDB!",
+        "description": "If he was a programmer",
+        "tags": [
+          "lldb"
+        ]
+      },
+      {
         "id": "cpp/2020_11_cmake1",
         "date": "2020 11 05",
         "title": "CMake My Day!",
