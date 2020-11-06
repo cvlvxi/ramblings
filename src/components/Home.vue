@@ -54,8 +54,9 @@ export default {
         for (let [key, objList] of Object.entries(ordered_entries)) {
           filtered_entries[key] = objList.filter(
             x =>
-              x.title.includes(this.search) ||
-              x.description.includes(this.search)
+              x.title.toLowerCase().includes(this.search.toLowerCase()) ||
+              x.description.toLowerCase().includes(this.search.toLowerCase()) ||
+              x.tags.includes(this.search)
           );
         }
         ordered_entries = filtered_entries;
