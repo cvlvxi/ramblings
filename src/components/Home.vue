@@ -33,11 +33,10 @@ import { tags } from "../tags.js";
 import { compare } from "../utils.js";
 export default {
   name: "home",
-  props: ["selectedTag"],
+  props: ["selectedTag", "search"],
   computed: {
     entries() {
       // Order all the entries by date
-      console.log(this.selectedTag);
       let ordered_entries = {};
       for (let k of Object.keys(BlogEntries).sort((a, b) => compare(a, b))) {
         if (this.selectedTag === null || this.selectedTag === "Show all") {
@@ -49,6 +48,17 @@ export default {
             .filter(x => x.tags.includes(this.selectedTag))
             .sort((a, b) => compare(a, b));
         }
+      }
+      if (this.search !== "") {
+        let filtered_entries = {};
+        for (let [key, objList] of Object.entries(ordered_entries)) {
+          filtered_entries[key] = objList.filter(
+            x =>
+              x.title.includes(this.search) ||
+              x.description.includes(this.search)
+          );
+        }
+        ordered_entries = filtered_entries;
       }
       return ordered_entries;
     }

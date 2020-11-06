@@ -26,9 +26,14 @@
         </b-dropdown-item>
       </b-dropdown>
       &nbsp;
-      <b-button @click="toggleAwesome">Awesome!</b-button>
+      <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
+      <input v-model="search" placeholder="Search" />
     </b-jumbotron>
-    <router-view v-if="!this.showAwesome" :selected-tag="this.selectedTag" />
+    <router-view
+      v-if="!this.showAwesome"
+      :selected-tag="this.selectedTag"
+      :search="this.search"
+    />
     <Awesome v-if="this.showAwesome" />
   </div>
 </template>
@@ -49,7 +54,8 @@ export default {
       tagOptions: [],
       tagKeys: Object.keys(tags),
       selectedTag: null,
-      showAwesome: false
+      showAwesome: false,
+      search: ""
     };
   },
   methods: {
