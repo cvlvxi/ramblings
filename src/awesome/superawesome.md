@@ -25,10 +25,15 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
+
+<b-alert show variant="primary">Awesome Lists</b-alert>
+
 ## <a name='AwesomeLists'></a>Awesome Lists
 - [Awesome CheatSheets](https://github.com/detailyang/awesome-cheatsheet#platforms)
 
 -----------------------------------------------------------
+
+<b-alert show variant="secondary">C++</b-alert>
 
 ## <a name='C'></a>C++
 
@@ -64,12 +69,16 @@
 
 -----------------------------------------------------------
 
+<b-alert show variant="success">Algorithms</b-alert>
+
 ## <a name='Algorithms'></a>Algorithms 
 
 ### <a name='StringMatch'></a>String Match
 - [Fast bit vector algorithm for string match](http://www.gersteinlab.org/courses/452/09-spring/pdf/Myers.pdf)
 
 -----------------------------------------------------------
+
+  <b-alert show variant="danger">Bioinformatics</b-alert>
 
 
 ## <a name='Bioinformatics'></a>Bioinformatics 
@@ -80,17 +89,25 @@
 
 -----------------------------------------------------------
 
+<b-alert show variant="warning">Javascript</b-alert>
+
 ## <a name='Javscript'></a>Javscript
 ### <a name='Visualization'></a>Visualization
 - [D3 Examples 1](https://bl.ocks.org/mbostock)
 
+### VueJS
+- [Bootstrap Vue](https://bootstrap-vue.org/docs/components)
 
 -----------------------------------------------------------
+
+<b-alert show variant="info">Groovy</b-alert>
 
 ## <a name='Groovy'></a>Groovy
 - [Mr Hakis Groovy Blog](https://blog.mrhaki.com/)
 
 -----------------------------------------------------------
+
+<b-alert show variant="light">Python</b-alert>
 
 ## <a name='Python'></a>Python
 - [Python vs Cython vs C](https://notes-on-cython.readthedocs.io/en/latest/std_dev.html)
@@ -98,16 +115,22 @@
 
 -----------------------------------------------------------
 
+ <b-alert show variant="dark">Rust</b-alert>
+
 
 ## <a name='Rust'></a>Rust
 - [Bevy: Game Engine](https://bevyengine.org/learn/book/introduction/)
 
 -----------------------------------------------------------
 
+<b-alert show variant="primary">Music</b-alert>
+
 ## <a name='Music'></a>Music
 - [The best song ever](https://www.youtube.com/watch?v=7lhJ0LZtv3w&feature=youtu.be)
 
 -----------------------------------------------------------
+
+ <b-alert show variant="secondary">Podcast</b-alert>
 
 ## <a name='Postcasts'></a>Postcasts
 - [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
