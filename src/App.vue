@@ -29,15 +29,19 @@
       <b-button @click="toggleAwesome">Awesome!</b-button>
     </b-jumbotron>
     <router-view v-if="!this.showAwesome" :selected-tag="this.selectedTag" />
+    <Awesome v-if="this.showAwesome" />
   </div>
 </template>
 
 <script>
 import { tags } from "./tags.js";
+import Awesome from "./awesome/Awesome";
 
 export default {
   name: "App",
-  components: {},
+  components: {
+    Awesome
+  },
   data() {
     return {
       github: "https://github.com/cvlvxi",
