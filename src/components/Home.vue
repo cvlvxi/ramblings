@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     <div class="sections">
       <div
         v-for="(section, index) in Object.keys(entries)"
@@ -23,6 +24,12 @@
           </div>
         </div>
       </div>
+      <b-pagination
+      :total-rows="1"
+      :per-page="20"
+      aria-controls="my-table"
+      align="fill"
+    ></b-pagination>
     </div>
   </div>
 </template>
