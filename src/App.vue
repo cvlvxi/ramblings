@@ -13,6 +13,8 @@
       <template>
         Ramble: First Blog Part <span style="color: red">II</span>
       </template>
+      <br />
+      Day <span style="color:red">{{ this.days_since_stopping }}</span>
 
       <hr class="my-4" />
 
@@ -49,8 +51,17 @@ export default {
   components: {
     Awesome
   },
+  computed: {
+    days_since_stopping() {
+      let d1 = Date.now();
+      let d2 = this.stopDate;
+      let dayDiff = Math.floor((d1 - d2) / (1000 * 3600 * 24));
+      return dayDiff;
+    }
+  },
   data() {
     return {
+      stopDate: new Date("11/07/2020"),
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
       tagOptions: [],

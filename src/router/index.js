@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/Home.vue'
-import Secret from '../components/Secret.vue'
 
 Vue.use(Router)
 
@@ -30,11 +29,6 @@ export default new Router({
       name: 'home',
       component: Home,
       props: true
-    },
-    {
-      path: '/secret',
-      name: 'secret',
-      component: Secret
     },
     ...blogRoutes
   ]
