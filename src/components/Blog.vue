@@ -39,10 +39,22 @@ export default {};
       font-size: 3rem;
       margin-bottom: 0.2rem;
       color: #42b883;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    h3 {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
     h4 {
       margin-bottom: 3rem;
       color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
     pre {
       overflow-x: auto;
