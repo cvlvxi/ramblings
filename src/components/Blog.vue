@@ -36,23 +36,26 @@ export default {};
   }
   /deep/ {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 0.2rem;
       color: #42b883;
       padding-top: 20px;
       padding-bottom: 20px;
     }
     h3 {
+      font-size: 1.3rem;
       padding-top: 20px;
       padding-bottom: 20px;
     }
     h4 {
+      font-size: 1rem;
       margin-bottom: 3rem;
       color: #fff;
       padding-top: 20px;
       padding-bottom: 20px;
     }
     h2 {
+      font-size: 1.5rem;
       padding-top: 20px;
       padding-bottom: 20px;
     }
