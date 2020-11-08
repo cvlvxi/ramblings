@@ -3,6 +3,11 @@
 	* [Installation of emscripten](#Installationofemscripten)
 	* [Make the "latest" SDK "active" for the current user. (writes .emscripten file)](#MakethelatestSDKactiveforthecurrentuser.writes.emscriptenfile)
 	* [Activate PATH and other environment variables in the current terminal](#ActivatePATHandotherenvironmentvariablesinthecurrentterminal)
+* [First Project Example](#FirstProjectExample)
+	* [Hello World](#HelloWorld)
+	* [Basic Makefile](#BasicMakefile)
+	* [Compilation](#Compilation)
+	* [Linking js with a html file](#Linkingjswithahtmlfile)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -26,12 +31,12 @@
 5. `source ./emsdk_env.sh`
 
 
-## First Project Example
+## <a name='FirstProjectExample'></a>First Project Example
 Let's build a Hello World app 
 
 Git Repo: [https://github.com/cvlvxi/emscripten_testing](https://github.com/cvlvxi/emscripten_testing)
 
-### Hello World
+### <a name='HelloWorld'></a>Hello World
 
 ```c++
 #include <iostream>
@@ -40,7 +45,7 @@ int main() { std::cout << "Hello World" << std::endl; }
 ```
 
 
-### Basic Makefile
+### <a name='BasicMakefile'></a>Basic Makefile
 
 ```makefile
 BUILD_DIR=build
@@ -69,7 +74,7 @@ debug: link_build
 
 Note running emcmake and emmake 
 
-### Compilation
+### <a name='Compilation'></a>Compilation
 
 Compiling an executable will output a `.js` and a `.wasm` file 
 
@@ -84,7 +89,7 @@ example.js
 example.wasm
 ```
 
-### Linking js with a html file
+### <a name='Linkingjswithahtmlfile'></a>Linking js with a html file
 
 ```
 <!DOCTYPE html>
