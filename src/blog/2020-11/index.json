@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_emscripten",
+        "date": "2020 11 08",
+        "title": "Emscripten C++ (getting started)",
+        "description": "Running C++ in the browser with WASM + Emscripten",
+        "tags": [
+          "c++"
+        ]
+      },
+      {
         "id": "food/2020_11_food2",
         "date": "2020 11 07",
         "title": "Delicacies Delicioso II",
