@@ -8,6 +8,7 @@
 	* [Other](#Other)
 	* [Parallel/Async](#ParallelAsync)
 	* [Cmake](#Cmake)
+	* [Blogs](#Blogs)
 * [Algorithms](#Algorithms)
 	* [String Match](#StringMatch)
 * [Bioinformatics](#Bioinformatics)
@@ -67,7 +68,7 @@
 - [Using modern cmake patterns to enforce good modular design](https://www.youtube.com/watch?v=eC9-iRN2b04)
 - [Effective CMake](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
 
-### Blogs
+### <a name='Blogs'></a>Blogs
 - [Arthur O'Dwyer](https://quuxplusone.github.io/blog/)
 
 
@@ -137,6 +138,8 @@
  <b-alert show variant="secondary">Podcast</b-alert>
 
 ## <a name='Postcasts'></a>Postcasts
+- [CppCast](https://www.youtube.com/channel/UCuCjADS4u3uJDTqUaG0H9dA)
+- [Lex Fridman](https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA)
 - [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
 - [Sam Harris - Waking up](https://wakingup.com/)
 - [Jay Oakerson & Dan Soder - The Bonfire](http://www.cc.com/shows/bonfire)
