@@ -13,5 +13,6 @@ export let tags = {
     'other': 'info',
     'python': 'success',
     'rust': 'danger',
-    'shortstory': 'success'
+    'shortstory': 'success',
+    'wasm': 'danger'
 }

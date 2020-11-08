@@ -6,7 +6,8 @@
         "title": "Emscripten C++ (getting started)",
         "description": "Running C++ in the browser with WASM + Emscripten",
         "tags": [
-          "c++"
+          "c++",
+          "wasm"
         ]
       },
       {
