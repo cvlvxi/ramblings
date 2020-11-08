@@ -67,6 +67,9 @@
 - [Using modern cmake patterns to enforce good modular design](https://www.youtube.com/watch?v=eC9-iRN2b04)
 - [Effective CMake](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
 
+### Blogs
+- [Arthur O'Dwyer](https://quuxplusone.github.io/blog/)
+
 
 -----------------------------------------------------------
 
