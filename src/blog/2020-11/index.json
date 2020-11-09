@@ -1,16 +1,26 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_magnum",
+        "date": "2020 11 10",
+        "title": "Magnum: Graphics Middleware C++ ",
+        "description": "Visualisations and Game Making Library",
+        "tags": [
+          "c++",
+          "gamedev"
+        ]
+      },
+      {
         "id": "finance/2020_11_blitzscaling",
         "date": "2020 11 09",
         "title": "Blitzscaling",
         "description": "Tech strategy: Blitzscaling",
         "tags": [
-          "finance"
+          "tech"
         ]
       },
       {
-        "id": "cpp/2020_11_jaybirds_vistas",
+        "id": "tech/2020_11_jaybirds_vistas",
         "date": "2020 11 09",
         "title": "Review: Jaybirds Vistas",
         "description": "Wireless earbuds",
