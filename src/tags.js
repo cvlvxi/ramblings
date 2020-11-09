@@ -14,6 +14,6 @@ export let tags = {
     'python': 'success',
     'rust': 'danger',
     'shortstory': 'success',
-    'tech': 'info',
+    'tech': 'success',
     'wasm': 'danger'
 }

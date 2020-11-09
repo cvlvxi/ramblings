@@ -1,6 +1,24 @@
 {
     "2020-11": [
       {
+        "id": "finance/2020_11_blitzscaling",
+        "date": "2020 11 09",
+        "title": "Blitzscaling",
+        "description": "Tech strategy: Blitzscaling",
+        "tags": [
+          "finance"
+        ]
+      },
+      {
+        "id": "cpp/2020_11_jaybirds_vistas",
+        "date": "2020 11 09",
+        "title": "Review: Jaybirds Vistas",
+        "description": "Wireless earbuds",
+        "tags": [
+          "tech"
+        ]
+      },
+      {
         "id": "cpp/2020_11_emscripten",
         "date": "2020 11 08",
         "title": "Emscripten C++ (getting started)",
