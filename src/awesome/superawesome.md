@@ -149,3 +149,4 @@
 - [Motherboard - CYBER](https://play.acast.com/s/cyber)
 - [Zachtronics Podcast](http://www.zachtronics.com/podcast/)
 - [Intelligence Matters](https://art19.com/shows/intelligence-matters)
+- [Michael Osterholm - COVID19 Podcast](https://www.cidrap.umn.edu/covid-19/podcasts-webinars)
