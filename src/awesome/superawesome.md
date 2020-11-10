@@ -19,7 +19,8 @@
 * [Python](#Python)
 * [Rust](#Rust)
 * [Music](#Music)
-* [Postcasts](#Postcasts)
+* [Podcasts](#Podcasts)
+* [Youtube](#Youtube)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -137,7 +138,7 @@
 
  <b-alert show variant="secondary">Podcast</b-alert>
 
-## <a name='Postcasts'></a>Postcasts
+## <a name='Podcasts'></a>Podcasts
 - [CppCast](https://www.youtube.com/channel/UCuCjADS4u3uJDTqUaG0H9dA)
 - [Lex Fridman](https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA)
 - [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
@@ -150,3 +151,11 @@
 - [Zachtronics Podcast](http://www.zachtronics.com/podcast/)
 - [Intelligence Matters](https://art19.com/shows/intelligence-matters)
 - [Michael Osterholm - COVID19 Podcast](https://www.cidrap.umn.edu/covid-19/podcasts-webinars)
+
+
+-----------------------------------------------------------
+
+<b-alert show variant="success">Youtube</b-alert>
+
+## <a name='Youtube'></a>Youtube
+ - [C++ Weekly](https://www.youtube.com/user/lefticus1)
