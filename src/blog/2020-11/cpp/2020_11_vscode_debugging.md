@@ -10,24 +10,29 @@
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "clang++ - Build and debug active file",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${fileDirname}/${fileBasenameNoExtension}",
-        "args": [],
-        "stopAtEntry": true,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": false,
-        "MIMode": "lldb",
-        "preLaunchTask": "clang++ build active file"
-      }
-    ]
-  }
+  "configurations": [
+    {
+      "name": "Launch Example Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/example/example",
+      "args": [],
+    },
+    {
+      "name": "Launch Example2 Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/example2/example2",
+      "args": [],
+    },
+    {
+      "name": "Launch Sdoku Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/sdoku/sdoku",
+      "args": [],
+    }
+  ]
+}
+
 ```
