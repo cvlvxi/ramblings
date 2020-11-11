@@ -6,6 +6,12 @@
 * 5. [SDL & Gl Configuration](#SDLGlConfiguration)
 * 6. [Camera Initialization](#CameraInitialization)
 * 7. [What's an Object2D & Scene2D](#WhatsanObject2DScene2D)
+* 8. [What's createBody?](#WhatscreateBody)
+	* 8.1. [b2BodyType](#b2BodyType)
+	* 8.2. [DualComplex?](#DualComplex)
+	* 8.3. [8.3 Default value for density in createBody](#DefaultvaluefordensityincreateBody)
+	* 8.4. [Create Body Definition](#CreateBodyDefinition)
+		* 8.4.1. [8.4 b2BodyDef](#b2BodyDef)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -135,6 +141,8 @@ typedef SceneGraph::Scene<
   new BoxDrawable{*ground, _instanceData, 0xa5c9ea_rgbf, _drawables};
 ```
 
+##  8. <a name='WhatscreateBody'></a>What's createBody?
+
 - First call to createBody
 
 ```c++
@@ -143,4 +151,104 @@ b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
                                  const b2BodyType type,
                                  const DualComplex &transformation,
                                  const Float density) {
+```
+
+###  8.1. <a name='b2BodyType'></a>b2BodyType
+
+```c++
+
+/// The body type.
+/// static: zero mass, zero velocity, may be manually moved
+/// kinematic: zero mass, non-zero velocity set by user, moved by solver
+/// dynamic: positive mass, non-zero velocity determined by forces, moved by solver
+enum b2BodyType
+{
+	b2_staticBody = 0,
+	b2_kinematicBody,
+	b2_dynamicBody
+};
+```
+
+###  8.2. <a name='DualComplex'></a>DualComplex?
+
+```c++
+/** @brief Float dual complex number */
+typedef Math::DualComplex<Float> DualComplex;
+```
+
+###  8.3. <a name='DefaultvaluefordensityincreateBody'></a>8.3 Default value for density in createBody
+
+```c++
+  b2Body *createBody(Object2D &object, const Vector2 &size, b2BodyType type,
+                     const DualComplex &transformation, Float density = 1.0f);
+```
+
+###  8.4. <a name='CreateBodyDefinition'></a>Create Body Definition
+
+```c++
+b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
+                                 const b2BodyType type,
+                                 const DualComplex &transformation,
+                                 const Float density) {
+  b2BodyDef bodyDefinition;
+  bodyDefinition.position.Set(transformation.translation().x(),
+                              transformation.translation().y());
+  bodyDefinition.angle = Float(transformation.rotation().angle());
+  bodyDefinition.type = type;
+  b2Body *body = _world->CreateBody(&bodyDefinition);
+
+  b2PolygonShape shape;
+  shape.SetAsBox(halfSize.x(), halfSize.y());
+
+  b2FixtureDef fixture;
+  fixture.friction = 0.8f;
+  fixture.density = density;
+  fixture.shape = &shape;
+  body->CreateFixture(&fixture);
+
+#ifndef IT_IS_THE_OLD_BOX2D
+  /* Why keep things simple if there's an awful and backwards-incompatible
+     way, eh? https://github.com/erincatto/box2d/pull/658 */
+  body->GetUserData().pointer = reinterpret_cast<std::uintptr_t>(&object);
+#else
+  body->SetUserData(&object);
+#endif
+  object.setScaling(halfSize);
+
+  return body;
+}
+```
+
+See call site again
+
+```c++
+  createBody(*ground, {11.0f, 0.5f}, b2_staticBody,
+             DualComplex::translation(Vector2::yAxis(-8.0f)));
+```
+
+####  8.4.1. <a name='b2BodyDef'></a>8.4 b2BodyDef
+
+```c++
+/// A body definition holds all the data needed to construct a rigid body.
+/// You can safely re-use body definitions. Shapes are added to a body after construction.
+struct B2_API b2BodyDef
+{
+	/// This constructor sets the body definition default values.
+	b2BodyDef()
+	{
+		position.Set(0.0f, 0.0f);
+		angle = 0.0f;
+		linearVelocity.Set(0.0f, 0.0f);
+		angularVelocity = 0.0f;
+		linearDamping = 0.0f;
+		angularDamping = 0.0f;
+		allowSleep = true;
+		awake = true;
+		fixedRotation = false;
+		bullet = false;
+		type = b2_staticBody;
+		enabled = true;
+		gravityScale = 1.0f;
+	}
+}
 ```
