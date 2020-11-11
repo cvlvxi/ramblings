@@ -1,13 +1,32 @@
+<!-- vscode-markdown-toc -->
+* 1. [Link](#Link)
+* 2. [Entry point](#Entrypoint)
+* 3. [Class definition](#Classdefinition)
+* 4. [Arguments](#Arguments)
+* 5. [SDL & Gl Configuration](#SDLGlConfiguration)
+* 6. [Camera Initialization](#CameraInitialization)
+* 7. [What's an Object2D & Scene2D](#WhatsanObject2DScene2D)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+
 # Walk through example: Box2dExample
 
-Entry point:
+##  1. <a name='Link'></a>Link
+- [Magnum Box2d Example](https://github.com/mosra/magnum-examples/tree/master/src/box2d)
+
+##  2. <a name='Entrypoint'></a>Entry point
 
 ```
 
 MAGNUM_APPLICATION_MAIN(Magnum::Examples::Box2DExample)
 ```
 
-Class definition 
+##  3. <a name='Classdefinition'></a>Class definition 
 
 ```c++
 class Box2DExample : public Platform::Application {
@@ -34,8 +53,9 @@ private:
 };
 ```
 
+##  4. <a name='Arguments'></a>Arguments 
+
 - Arguments processes argc and argv in the [Type]Application Magnum specific implementation e.g. Sdl2
-- Callsite
 
 ```c++
 
@@ -56,6 +76,8 @@ Box2DExample::Box2DExample(const Arguments &arguments)
  args.value<DualComplex>("transformation").normalized();
 ```
 
+##  5. <a name='SDLGlConfiguration'></a>SDL & Gl Configuration
+
 - Platform Specific configuration (sdl2) and gl configuration
 
 ```c++
@@ -69,7 +91,7 @@ Box2DExample::Box2DExample(const Arguments &arguments)
   }
 ```
 
-- Camera Initialization
+##  6. <a name='CameraInitialization'></a>Camera Initialization
 
 ```c++
   /* Configure camera */
@@ -80,7 +102,7 @@ Box2DExample::Box2DExample(const Arguments &arguments)
       .setViewport(GL::defaultFramebuffer.viewport().size());
 ```
 
-- What's an Object2D?
+##  7. <a name='WhatsanObject2DScene2D'></a>What's an Object2D & Scene2D
 
 ```c++
 typedef SceneGraph::Object<
