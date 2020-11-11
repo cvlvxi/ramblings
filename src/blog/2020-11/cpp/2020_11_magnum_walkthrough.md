@@ -28,8 +28,7 @@
 
 ##  2. <a name='Entrypoint'></a>Entry point
 
-```
-
+```c++
 MAGNUM_APPLICATION_MAIN(Magnum::Examples::Box2DExample)
 ```
 
@@ -258,6 +257,59 @@ struct B2_API b2BodyDef
 
 ####  8.4.2. <a name='CreateBody'></a>CreateBody
 
-```
+```c++
 b2Body *body = _world->CreateBody(&bodyDefinition);
+  b2PolygonShape shape;
+  shape.SetAsBox(halfSize.x(), halfSize.y());
+
+  b2FixtureDef fixture;
+  fixture.friction = 0.8f;
+  fixture.density = density;
+  fixture.shape = &shape;
+  body->CreateFixture(&fixture);
+
+#ifndef IT_IS_THE_OLD_BOX2D
+  /* Why keep things simple if there's an awful and backwards-incompatible
+     way, eh? https://github.com/erincatto/box2d/pull/658 */
+  body->GetUserData().pointer = reinterpret_cast<std::uintptr_t>(&object);
+#else
+  body->SetUserData(&object);
+#endif
+  object.setScaling(halfSize);
+  return body;
 ```
+
+## NoCreate
+
+- This is a constexpr Tag defined in Tags.h
+
+```c++
+
+/**
+@brief No creation tag
+
+Use for construction with initialization, but keeping the instance empty
+(usually equivalent to a moved-out state).
+*/
+constexpr NoCreateT NoCreate{NoCreateT::Init{}};
+
+...
+...
+/* Explicit constructor to avoid ambiguous calls when using {} */
+struct NoCreateT {
+    #ifndef DOXYGEN_GENERATING_OUTPUT
+    struct Init{};
+    constexpr explicit NoCreateT(Init) {}
+    #endif
+};
+```
+
+When defined like such in the class constructor
+
+```c++
+
+HelloWorld::HelloWorld(const Arguments &arguments)
+    : Platform::Application{arguments, NoCreate} {
+```
+
+It will not spawn an SDL2 window when created 

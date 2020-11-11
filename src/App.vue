@@ -61,7 +61,7 @@ export default {
   },
   data() {
     return {
-      stopDate: new Date("11/09/2020"),
+      stopDate: new Date("11/11/2020"),
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
       tagOptions: [],
