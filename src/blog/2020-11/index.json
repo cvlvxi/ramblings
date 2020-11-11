@@ -6,7 +6,8 @@
         "title": "Simple VSCode C++ debug integration",
         "description": "Simple VSCode debugging with lldb",
         "tags": [
-          "c++"
+          "c++",
+          "vscode"
         ]
       },
       {
