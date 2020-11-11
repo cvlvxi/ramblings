@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "bio/2020_11_bio1",
+        "date": "2020 11 11",
+        "title": "Bio Projects for C++",
+        "description": "Thinking about random bio projects to do in C++",
+        "tags": [
+          "bio"
+        ]
+      },
+      {
         "id": "cpp/2020_11_magnum",
         "date": "2020 11 10",
         "title": "Magnum: Graphics Middleware C++ ",
