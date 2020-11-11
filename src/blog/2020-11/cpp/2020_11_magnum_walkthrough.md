@@ -9,9 +9,10 @@
 * 8. [What's createBody?](#WhatscreateBody)
 	* 8.1. [b2BodyType](#b2BodyType)
 	* 8.2. [DualComplex?](#DualComplex)
-	* 8.3. [8.3 Default value for density in createBody](#DefaultvaluefordensityincreateBody)
+	* 8.3. [Default value for density in createBody](#DefaultvaluefordensityincreateBody)
 	* 8.4. [Create Body Definition](#CreateBodyDefinition)
-		* 8.4.1. [8.4 b2BodyDef](#b2BodyDef)
+		* 8.4.1. [b2BodyDef](#b2BodyDef)
+		* 8.4.2. [CreateBody](#CreateBody)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -176,7 +177,7 @@ enum b2BodyType
 typedef Math::DualComplex<Float> DualComplex;
 ```
 
-###  8.3. <a name='DefaultvaluefordensityincreateBody'></a>8.3 Default value for density in createBody
+###  8.3. <a name='DefaultvaluefordensityincreateBody'></a>Default value for density in createBody
 
 ```c++
   b2Body *createBody(Object2D &object, const Vector2 &size, b2BodyType type,
@@ -226,7 +227,9 @@ See call site again
              DualComplex::translation(Vector2::yAxis(-8.0f)));
 ```
 
-####  8.4.1. <a name='b2BodyDef'></a>8.4 b2BodyDef
+Ok so it's setting gravity -8.0f 
+
+####  8.4.1. <a name='b2BodyDef'></a>b2BodyDef
 
 ```c++
 /// A body definition holds all the data needed to construct a rigid body.
@@ -251,4 +254,10 @@ struct B2_API b2BodyDef
 		gravityScale = 1.0f;
 	}
 }
+```
+
+####  8.4.2. <a name='CreateBody'></a>CreateBody
+
+```
+b2Body *body = _world->CreateBody(&bodyDefinition);
 ```
