@@ -1,6 +1,16 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_magnum_walkthrough",
+        "date": "2020 11 11",
+        "title": "Magnum Example Walkthrough",
+        "description": "Stepping through the Box2DExample",
+        "tags": [
+          "c++",
+          "gamedev"
+        ]
+      },
+      {
         "id": "cpp/2020_11_vscode_debugging",
         "date": "2020 11 11",
         "title": "Simple VSCode C++ debug integration",
