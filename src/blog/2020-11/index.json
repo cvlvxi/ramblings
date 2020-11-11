@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "ide/2020_11_jetbrains",
+        "date": "2020 11 12",
+        "title": "No Brain for JetBrains",
+        "description": "Zombie Mode",
+        "tags": [
+          "ide"
+        ]
+      },
+      {
         "id": "cpp/2020_11_magnum_walkthrough",
         "date": "2020 11 11",
         "title": "Magnum Example Walkthrough",
