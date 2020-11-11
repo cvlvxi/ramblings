@@ -6,6 +6,7 @@ export let tags = {
     'c++': 'primary',
     'cmake': 'danger',
     'food': 'warning',
+    'gamedev': 'danger',
     'logic': 'warning',
     'lldb': 'info',
     'math': 'secondary',
