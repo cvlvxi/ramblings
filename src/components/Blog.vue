@@ -45,9 +45,11 @@ export default {};
     h3 {
       font-size: 1.3rem;
       padding-top: 20px;
+      color: #42b883;
       padding-bottom: 20px;
     }
     h4 {
+      color: #42b883;
       font-size: 1rem;
       margin-bottom: 3rem;
       color: #fff;
@@ -57,6 +59,7 @@ export default {};
     h2 {
       font-size: 1.5rem;
       padding-top: 20px;
+      color: #42b883;
       padding-bottom: 20px;
     }
     pre {
