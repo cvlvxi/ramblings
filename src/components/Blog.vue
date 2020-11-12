@@ -11,8 +11,14 @@ export default {};
 @media screen and (min-width: 1200px) {
   .blog {
     max-width: 1000px !important;
+    /deep/ {
+      pre {
+        font-size: 16px !important;
+      }
+    }
   }
 }
+
 .blog {
   max-width: 600px;
   padding: 15px;
@@ -35,6 +41,9 @@ export default {};
     }
   }
   /deep/ {
+    pre {
+      font-size: 12px;
+    }
     h1 {
       font-size: 2rem;
       margin-bottom: 0.2rem;
