@@ -3,6 +3,8 @@
 	* [File Search](#FileSearch)
 	* [Reconfigure Go Back + Go Forward](#ReconfigureGoBackGoForward)
 	* [Is there a hotkey to see all symbols in a class?](#Isthereahotkeytoseeallsymbolsinaclass)
+* [Visual Code](#VisualCode)
+	* [Layout](#Layout)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -35,8 +37,8 @@ Best to move that to the top right
 
 -----------------------------------------------------------
 
-## Visual Code
+## <a name='VisualCode'></a>Visual Code
 
-### Layout
+### <a name='Layout'></a>Layout
 
 <img src="https://imgur.com/v97IO0e.png"/>
