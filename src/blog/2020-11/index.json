@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "lims/2020_11_clarity",
+        "date": "2020 11 12",
+        "title": "Clarity? Not so clear",
+        "description": "LIMS? Feeling amputated",
+        "tags": [
+          "lims"
+        ]
+      },
+      {
         "id": "ide/2020_11_jetbrains",
         "date": "2020 11 12",
         "title": "No Brain for JetBrains ",

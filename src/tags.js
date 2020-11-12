@@ -10,6 +10,7 @@ export let tags = {
     'ide': 'info',
     'logic': 'warning',
     'lldb': 'info',
+    'lims': 'warning',
     'math': 'secondary',
     'movies': 'info',
     'other': 'info',
