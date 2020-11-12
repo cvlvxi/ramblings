@@ -149,6 +149,7 @@ typedef SceneGraph::Scene<
   new BoxDrawable{*ground, _instanceData, 0xa5c9ea_rgbf, _drawables};
 ```
 
+
 ##  8. <a name='WhatscreateBody'></a>What's createBody?
 
 - First call to createBody
@@ -483,7 +484,11 @@ This hex value + _rgbf complains:
 
 - Documentation suggests: [https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Math_1_1Literals.html](https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Math_1_1Literals.html)
 
-2
+Thing that's missing
+
+```c++
+using namespace Math::Literals;
+```
 
 ##  13. <a name='EntityComponentsystemMagnum'></a>Entity Component system + Magnum
 - Here's an implementation of ENTT pong with magnum by skypjack the creator of entt
