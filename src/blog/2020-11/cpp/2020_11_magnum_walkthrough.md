@@ -19,6 +19,7 @@
 	* 10.2. [Flat2D?](#Flat2D)
 * 11. [Meshes](#Meshes)
 * 12. [BoxDrawable](#BoxDrawable)
+	* 12.1. [Issue creating a BoxDrawable](#IssuecreatingaBoxDrawable)
 * 13. [Entity Component system + Magnum](#EntityComponentsystemMagnum)
 
 <!-- vscode-markdown-toc-config
@@ -465,6 +466,21 @@ struct InstanceData {
 
 Interestingly note that it's a AOS rather than SOA.. so this isn't entity component driven? 
 
+###  12.1. <a name='IssuecreatingaBoxDrawable'></a>Issue creating a BoxDrawable
+- This call
+
+```c++
+new BoxDrawable{*ground, _instanceData, 0xa5c9ea_rgbf, _drawables};
+```
+
+This hex value + _rgbf complains:
+
+```bash
+ error: no matching literal operator for call to 'operator""_rgbf' with
+      argument of type 'unsigned long long' or 'const char *', and no matching literal operator template
+  new BoxDrawable{*ground, _instanceData, 0xa5c9ea_rgbf, _drawables};
+```
+
 ##  13. <a name='EntityComponentsystemMagnum'></a>Entity Component system + Magnum
 - Here's an implementation of ENTT pong with magnum by skypjack the creator of entt
-- https://gist.github.com/skypjack/598a4864a31ada6d3f18192a11de1923
+- [Entt + Magnum + Pong == ✅](https://gist.github.com/skypjack/598a4864a31ada6d3f18192a11de1923)
