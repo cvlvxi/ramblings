@@ -481,6 +481,20 @@ This hex value + _rgbf complains:
   new BoxDrawable{*ground, _instanceData, 0xa5c9ea_rgbf, _drawables};
 ```
 
+- Documentation suggests: [https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Math_1_1Literals.html](https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Math_1_1Literals.html)
+
+2
+
 ##  13. <a name='EntityComponentsystemMagnum'></a>Entity Component system + Magnum
 - Here's an implementation of ENTT pong with magnum by skypjack the creator of entt
 - [Entt + Magnum + Pong == ✅](https://gist.github.com/skypjack/598a4864a31ada6d3f18192a11de1923)
+
+I asked about ENTT AOS / SOA in magnum
+
+See response:
+
+```
+Interleaved (AoS) attributes are usually the better choice for vertex buffers if all the attributes are read together on the GPU. There might be a performance impact when filling it on the CPU, you'd have to time that. If you really need SoA, call addVertexBufferInstanced multiple times, example here. That entt example doesn't use instancing so you'll have one draw call per object, but it should be fairly easy to convert to filling out an instance buffer.
+```
+
+- [https://doc.magnum.graphics/magnum/classMagnum_1_1GL_1_1Mesh.html#a7f3faf30ff104d7db5cfe3f8cbf5031e](https://doc.magnum.graphics/magnum/classMagnum_1_1GL_1_1Mesh.html#a7f3faf30ff104d7db5cfe3f8cbf5031e)
