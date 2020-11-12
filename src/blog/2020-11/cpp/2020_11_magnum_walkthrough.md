@@ -498,8 +498,6 @@ I asked about ENTT AOS / SOA in magnum
 
 See response:
 
-```
 Interleaved (AoS) attributes are usually the better choice for vertex buffers if all the attributes are read together on the GPU. There might be a performance impact when filling it on the CPU, you'd have to time that. If you really need SoA, call addVertexBufferInstanced multiple times, example here. That entt example doesn't use instancing so you'll have one draw call per object, but it should be fairly easy to convert to filling out an instance buffer.
-```
 
 - [https://doc.magnum.graphics/magnum/classMagnum_1_1GL_1_1Mesh.html#a7f3faf30ff104d7db5cfe3f8cbf5031e](https://doc.magnum.graphics/magnum/classMagnum_1_1GL_1_1Mesh.html#a7f3faf30ff104d7db5cfe3f8cbf5031e)
