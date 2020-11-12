@@ -13,6 +13,11 @@
 	* 8.4. [Create Body Definition](#CreateBodyDefinition)
 		* 8.4.1. [b2BodyDef](#b2BodyDef)
 		* 8.4.2. [CreateBody](#CreateBody)
+* 9. [NoCreate](#NoCreate)
+* 10. [Shaders](#Shaders)
+	* 10.1. [Call site use](#Callsiteuse)
+	* 10.2. [Flat2D?](#Flat2D)
+* 11. [Meshes](#Meshes)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -279,7 +284,7 @@ b2Body *body = _world->CreateBody(&bodyDefinition);
   return body;
 ```
 
-## NoCreate
+##  9. <a name='NoCreate'></a>NoCreate
 
 - This is a constexpr Tag defined in Tags.h
 
@@ -313,3 +318,105 @@ HelloWorld::HelloWorld(const Arguments &arguments)
 ```
 
 It will not spawn an SDL2 window when created 
+
+
+##  10. <a name='Shaders'></a>Shaders
+
+Magnum Shaders definition
+
+```c++
+
+namespace Magnum { namespace Shaders {
+
+namespace Implementation {
+    enum class FlatFlag: UnsignedByte {
+        Textured = 1 << 0,
+        AlphaMask = 1 << 1,
+        VertexColor = 1 << 2,
+        TextureTransformation = 1 << 3,
+        #ifndef MAGNUM_TARGET_GLES2
+        ObjectId = 1 << 4,
+        InstancedObjectId = (1 << 5)|ObjectId,
+        #endif
+        InstancedTransformation = 1 << 6,
+        InstancedTextureOffset = (1 << 7)|TextureTransformation
+    };
+    typedef Containers::EnumSet<FlatFlag> FlatFlags;
+}
+```
+
+###  10.1. <a name='Callsiteuse'></a>Call site use
+
+```c++
+   /* Create an instanced shader */
+    _shader = Shaders::Flat2D{Shaders::Flat2D::Flag::VertexColor |
+                              Shaders::Flat2D::Flag::InstancedTransformation};
+  }
+```
+
+###  10.2. <a name='Flat2D'></a>Flat2D?
+
+```c++
+/** @brief 2D flat shader */
+typedef Flat<2> Flat2D;
+
+...
+
+template<UnsignedInt dimensions> class MAGNUM_SHADERS_EXPORT Flat: public GL::AbstractShaderProgram {
+    public:
+        /**
+         * @brief Vertex position
+         *
+         * @ref shaders-generic "Generic attribute",
+         * @ref Magnum::Vector2 "Vector2" in 2D, @ref Magnum::Vector3 "Vector3"
+         * in 3D.
+         */
+
+...
+
+
+class MAGNUM_GL_EXPORT AbstractShaderProgram: public AbstractObject {
+    #ifndef MAGNUM_TARGET_GLES2
+    friend TransformFeedback;
+    #endif
+    friend Implementation::ShaderProgramState;
+
+```
+
+Reading the docstring above Flat we can see it says:
+
+```
+Draws the whole mesh with given color or texture. For a colored mesh you need
+to provide the @ref Position attribute in your triangle mesh. By default, the
+shader renders the mesh with a white color in an identity transformation.
+Use @ref setTransformationProjectionMatrix(), @ref setColor() and others to
+configure the shader.
+```
+
+So it will generate a shader for you... vertex + pixel? 
+
+##  11. <a name='Meshes'></a>Meshes
+
+Compile with MeshTools and supply a primitive like  `squareSolid()`
+
+```c++
+    /* Box mesh with an (initially empty) instance buffer */
+    _mesh = MeshTools::compile(Primitives::squareSolid());
+    _instanceBuffer = GL::Buffer{};
+    _mesh.addVertexBufferInstanced(_instanceBuffer, 1, 0,
+                                   Shaders::Flat2D::TransformationMatrix{},
+                                   Shaders::Flat2D::Color3{});
+```
+
+So this creates a vertex buffer for you.. cool.. 
+
+Look under magnum Primitives folder for all types of primitives including:
+
+- Axis
+- Capsule
+- Circle
+- Cone
+- Gradiant
+- Line
+- Square
+- UV Sphere.. etc
