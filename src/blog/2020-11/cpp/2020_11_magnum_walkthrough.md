@@ -18,6 +18,8 @@
 	* 10.1. [Call site use](#Callsiteuse)
 	* 10.2. [Flat2D?](#Flat2D)
 * 11. [Meshes](#Meshes)
+* 12. [BoxDrawable](#BoxDrawable)
+* 13. [Entity Component system + Magnum](#EntityComponentsystemMagnum)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -420,3 +422,49 @@ Look under magnum Primitives folder for all types of primitives including:
 - Line
 - Square
 - UV Sphere.. etc
+
+##  12. <a name='BoxDrawable'></a>BoxDrawable
+
+```c++
+class BoxDrawable : public SceneGraph::Drawable2D {
+public:
+  explicit BoxDrawable(Object2D &object,
+                       Containers::Array<InstanceData> &instanceData,
+                       const Color3 &color,
+                       SceneGraph::DrawableGroup2D &drawables)
+      : SceneGraph::Drawable2D{object, &drawables},
+        _instanceData(instanceData), _color{color} {}
+
+private:
+  void draw(const Matrix3 &transformation, SceneGraph::Camera2D &) override {
+    arrayAppend(_instanceData, Containers::InPlaceInit, transformation, _color);
+  }
+
+  Containers::Array<InstanceData> &_instanceData;
+  Color3 _color;
+};
+```
+
+arrayAppend depends on:
+
+```c++
+#include <Corrade/Containers/Array.h>
+#include <Corrade/Containers/GrowableArray.h>
+```
+
+Where the array type is the `instanceData` -- see `Containers::Array<InstanceData>`
+
+and InstanceData is simply
+
+```c++
+struct InstanceData {
+  Matrix3 transformation;
+  Color3 color;
+};
+```
+
+Interestingly note that it's a AOS rather than SOA.. so this isn't entity component driven? 
+
+##  13. <a name='EntityComponentsystemMagnum'></a>Entity Component system + Magnum
+- Here's an implementation of ENTT pong with magnum by skypjack the creator of entt
+- https://gist.github.com/skypjack/598a4864a31ada6d3f18192a11de1923
