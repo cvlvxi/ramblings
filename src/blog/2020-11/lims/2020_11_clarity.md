@@ -1,5 +1,6 @@
 <!-- vscode-markdown-toc -->
 * [Links](#Links)
+* [Problem: How to attach a custom script to workflow?](#Problem:Howtoattachacustomscripttoworkflow)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -13,7 +14,10 @@
 
 *Sometimes how I feel when dealing with this system*
 
-Let's look at the CLARITY LIMS system (Illumina) and discover some tidbits as to how to best interact with it...
+Let's look at the CLARITY LIMS system and work through how to best deal with it...
 
 ## <a name='Links'></a>Links
-- [Official Illumina Page](https://www.illumina.com/products/by-type/informatics-products/basespace-clarity-lims.html)
+- [Official Page](https://www.illumina.com/products/by-type/informatics-products/basespace-clarity-lims.html)
+
+## <a name='Problem:Howtoattachacustomscripttoworkflow'></a>Problem: How to attach a custom script to workflow? 
+

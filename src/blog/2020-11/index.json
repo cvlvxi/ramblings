@@ -4,7 +4,7 @@
         "id": "lims/2020_11_clarity",
         "date": "2020 11 12",
         "title": "Clarity? Not so clear",
-        "description": "LIMS? But I feel amputated",
+        "description": "I have LIMS but I feel amputated :(",
         "tags": [
           "lims"
         ]
@@ -32,7 +32,7 @@
         "id": "cpp/2020_11_vscode_debugging",
         "date": "2020 11 11",
         "title": "Simple VSCode C++ debug integration",
-        "description": "Simple VSCode debugging with lldb",
+        "description": "Simple VSCode debugging with lldb.cpp",
         "tags": [
           "c++",
           "vscode"
