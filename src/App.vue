@@ -31,7 +31,7 @@
       </b-dropdown>
       &nbsp;
       <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
-      <input v-model="search" placeholder="Search" />
+      <input class="roundedInput" v-model="search" placeholder="Search" />
     </b-jumbotron>
     <router-view
       v-if="!this.showAwesome"
@@ -84,6 +84,9 @@ export default {
   .blog {
     max-width: 1000px !important;
   }
+}
+.roundedInput {
+  border-radius: 5px;
 }
 .center {
   text-align: center;
