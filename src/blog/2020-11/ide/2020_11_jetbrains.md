@@ -78,3 +78,36 @@ ${selectedText} - the current selected text in the active file
 ${execPath} - the path to the running VS Code executable
 ${defaultBuildTask} - the name of the default build task
 ```
+
+### Simple vscode debugging (lldb)
+
+- Install CodeLLDB Extension
+- .vscode/launch.json
+
+```json
+{
+  "configurations": [
+    {
+      "name": "Launch Example Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/example/example",
+      "args": [],
+    },
+    {
+      "name": "Launch Example2 Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/example2/example2",
+      "args": [],
+    },
+    {
+      "name": "Launch Sdoku Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/src/sdoku/sdoku",
+      "args": [],
+    }
+  ]
+}
+```
