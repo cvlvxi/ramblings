@@ -1,6 +1,16 @@
 {
     "2020-11": [
       {
+        "id": "gamedev/2020_11_godot",
+        "date": "2020 11 13",
+        "title": "Just Godot",
+        "description": "JUST DO IT",
+        "tags": [
+          "gamedev",
+          "godot"
+        ]
+      },
+      {
         "id": "nim/2020_11_nim1",
         "date": "2020 11 13",
         "title": "Jack be nimble jack be quick",
