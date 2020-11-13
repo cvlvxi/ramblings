@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "bio/2020_11_mastermind",
+        "date": "2020 11 13",
+        "title": "Genomenon: Mastermind API",
+        "description": "Exploring Genomenon Mastermind's API",
+        "tags": [
+          "bioinformatics"
+        ]
+      },
+      {
         "id": "lims/2020_11_clarity",
         "date": "2020 11 12",
         "title": "Clarity? Not so clear",
