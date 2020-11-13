@@ -12,6 +12,7 @@ import "prismjs/components/prism-python";
 import "prismjs/components/prism-rust";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
+import "prismjs/components/prism-csharp";
 import "prismjs/components/prism-nasm";
 import "prismjs/components/prism-nim";
 import "prismjs/components/prism-cmake";
