@@ -54,3 +54,11 @@ genomic coordinates with each variant in the output file annotated with the numb
 articles and Mastermind URL for each variant.
 ```
 
+## Problem: Try simple API request
+
+```
+curl -H "Content-type: application/json" -H "X-API-TOKEN: [[your API token here]]" -X GET
+"https://mastermind.genomenon.com/api/v2/counts?&disease=melanoma&gene=braf&variant=braf:v600e"
+```
+
+Setup with POSTMAN

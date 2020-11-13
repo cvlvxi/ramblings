@@ -13,6 +13,7 @@ export let tags = {
     'lims': 'warning',
     'math': 'secondary',
     'movies': 'info',
+    'nim': 'warning',
     'other': 'info',
     'python': 'success',
     'rust': 'danger',

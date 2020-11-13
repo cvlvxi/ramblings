@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "nim/2020_11_nim1",
+        "date": "2020 11 13",
+        "title": "Jack be nimble jack be quick",
+        "description": "Jack jump over another programming language",
+        "tags": [
+          "nim"
+        ]
+      },
+      {
         "id": "bio/2020_11_mastermind",
         "date": "2020 11 13",
         "title": "Genomenon: Mastermind API",
