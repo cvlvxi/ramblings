@@ -30,4 +30,8 @@ Let's look at the CLARITY LIMS system and work through how to best deal with it.
 - [Maybe?](https://support.illumina.com/help/BaseSpace_ClarityLIMS_OLH_115205/Content/Source/ClarityLIMS/API/AssignmentofSampleNextStepsBasedonaUDF.htm)
 
 
+- Ok.. For the version of Labware lims (older) that's self hosted you can access the custom script section for a step `in the java applet`
 
+See below
+
+<img src="https://imgur.com/RugxM31.png"/>

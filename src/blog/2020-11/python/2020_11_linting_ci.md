@@ -61,3 +61,26 @@ Your code has been rated at 9.02/10 (previous run: 10.00/10, -0.98)
 ```
 
 Ok cool!
+
+
+## Automating this with Gitlab CI/CD
+
+What's required for getting commit ci/cd running for your target repo is a `.gitlab-ci.yml` file in the root of your repo
+
+```bash
+# FIXME: This would be better with docker executor
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_STRATEGY: clone
+
+test:
+    stage: test
+    before_script:
+        - docker pull docker.io/centos/postgresql-96-centos7@sha256:ba5063d446028abf9813b8453c759cff94a0b1f2fb44e5a9a8012b29e14427a4
+        - DO SOME STUFF BEFORE
+    script:
+        - docker build -t tagname .
+        - DO YOUR TESTING HERE 
+    after_script:
+        - docker stop bleh 
+```
