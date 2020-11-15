@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_static_member",
+        "date": "2020 11 15",
+        "title": "Static Member initialisation",
+        "description": "Static Member Initialisation",
+        "tags": [
+          "c++"
+        ]
+      },
+      {
         "id": "gamedev/2020_11_godot",
         "date": "2020 11 13",
         "title": "Just Godot",
