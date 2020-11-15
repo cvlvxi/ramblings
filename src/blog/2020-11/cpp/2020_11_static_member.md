@@ -30,3 +30,6 @@ int main() {
 
 The error is when it tries to link the .o file since it can't find the method 
 
+
+
+This maybe only relevant to certain version of C++ and new versions `might be able to resolve this smartly`
