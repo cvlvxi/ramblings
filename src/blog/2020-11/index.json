@@ -1,6 +1,13 @@
 {
     "2020-11": [
       {
+      "id": "python/2020_11_linting_ci",
+      "date": "2020 11 16",
+      "title": "Pylint on commit!",
+      "description": "Pylint your code and check for failures",
+      "tags": ["python"]
+      },
+      {
         "id": "cpp/2020_11_cpp_template_specialization",
         "date": "2020 11 15",
         "title": "Template Specialization",
@@ -39,7 +46,7 @@
       },
       {
         "id": "bio/2020_11_mastermind",
-        "date": "2020 11 13",
+        "date": "2020 11 16",
         "title": "Genomenon: Mastermind API",
         "description": "Exploring Genomenon Mastermind's API",
         "tags": [

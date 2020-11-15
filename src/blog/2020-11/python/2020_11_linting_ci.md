@@ -1,0 +1,63 @@
+<!-- vscode-markdown-toc -->
+* 1. [Install pylint](#Installpylint)
+* 2. [Run Pylint](#RunPylint)
+* 3. [Handling no `objects` member](#Handlingnoobjectsmember)
+	* 3.1. [Django Specialty?](#DjangoSpecialty)
+	* 3.2. [Testing, it works!](#Testingitworks)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+# Lint
+
+Let's get pylinting working with a ci system e.g. `gitlab's ci`.
+
+##  1. <a name='Installpylint'></a>Install pylint
+
+```
+pip install pylint
+```
+
+##  2. <a name='RunPylint'></a>Run Pylint
+
+```
+pylint -j 4 --output-format=colorized --disable=R,C,W src
+```
+
+- j 4 for Running in multithreading for speed
+- `--disable=R,C,W` to disable codes for R, C, W since errors can be so verbose
+
+##  3. <a name='Handlingnoobjectsmember'></a>Handling no `objects` member
+
+```
+xip/views.py:1276:22: E1101: Class 'DataAsset' has no 'objects' member (no-member)
+xip/views.py:1418:29: E1101: Class 'DataAsset' has no 'objects' member (no-member)
+```
+
+###  3.1. <a name='DjangoSpecialty'></a>Django Specialty?
+
+- This project uses django so there might be something special there..
+- Do I need [this](https://pypi.org/project/pylint-django/)?
+- According to documentation you  need to run it like such:
+
+```
+DJANGO_SETTINGS_MODULE=your.app.settings pylint --load-plugins pylint_django [..other options..] <path_to_your_sources>
+```
+
+###  3.2. <a name='Testingitworks'></a>Testing, it works!
+
+```
+
+(py37env) ➜  lint git:(master) ✗ DJANGO_SETTINGS_MODULE=settings.py pylint --load-plugins pylint_django -j 4 --output-format=colorized --disable=R,C xip
+
+...
+...
+
+-------------------------------------------------------------------
+Your code has been rated at 9.02/10 (previous run: 10.00/10, -0.98)
+```
+
+Ok cool!

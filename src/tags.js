@@ -19,5 +19,6 @@ export let tags = {
     'rust': 'danger',
     'shortstory': 'success',
     'tech': 'success',
+    'thoughts': 'secondary',
     'wasm': 'danger'
 }
