@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "cpp/2020_11_cpp_template_specialization",
+        "date": "2020 11 15",
+        "title": "Template Specialization",
+        "description": "Template Specialization",
+        "tags": [
+          "c++"
+        ]
+      },
+      {
         "id": "cpp/2020_11_static_member",
         "date": "2020 11 15",
         "title": "Static Member initialisation",

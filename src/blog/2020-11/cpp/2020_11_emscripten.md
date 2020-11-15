@@ -38,7 +38,7 @@ Git Repo: [https://github.com/cvlvxi/emscripten_testing](https://github.com/cvlv
 
 ### <a name='HelloWorld'></a>Hello World
 
-```c++
+```cpp
 #include <iostream>
 
 int main() { std::cout << "Hello World" << std::endl; }

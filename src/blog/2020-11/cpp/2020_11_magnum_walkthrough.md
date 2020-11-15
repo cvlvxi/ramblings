@@ -42,7 +42,7 @@ MAGNUM_APPLICATION_MAIN(Magnum::Examples::Box2DExample)
 
 ##  3. <a name='Classdefinition'></a>Class definition 
 
-```c++
+```cpp
 class Box2DExample : public Platform::Application {
 public:
   explicit Box2DExample(const Arguments &arguments);
@@ -71,7 +71,7 @@ private:
 
 - Arguments processes argc and argv in the [Type]Application Magnum specific implementation e.g. Sdl2
 
-```c++
+```cpp
 
 Box2DExample::Box2DExample(const Arguments &arguments)
     : Platform::Application{arguments, NoCreate} {
@@ -94,7 +94,7 @@ Box2DExample::Box2DExample(const Arguments &arguments)
 
 - Platform Specific configuration (sdl2) and gl configuration
 
-```c++
+```cpp
     const Vector2 dpiScaling = this->dpiScaling({});
     Configuration conf;
     conf.setTitle("Magnum Box2D Example").setSize(conf.size(), dpiScaling);
@@ -107,7 +107,7 @@ Box2DExample::Box2DExample(const Arguments &arguments)
 
 ##  6. <a name='CameraInitialization'></a>Camera Initialization
 
-```c++
+```cpp
   /* Configure camera */
   _cameraObject = new Object2D{&_scene};
   _camera = new SceneGraph::Camera2D{*_cameraObject};
@@ -131,7 +131,7 @@ typedef SceneGraph::Object<
 
 - What's a Scene2D?
 
-```c++
+```cpp
 typedef SceneGraph::Scene<
     SceneGraph::TranslationRotationScalingTransformation2D>
     Scene2D;
@@ -141,7 +141,7 @@ typedef SceneGraph::Scene<
 
 - More box2d stuff
 
-```c++
+```cpp
   /* Create the ground */
   auto ground = new Object2D{&_scene}
   createBody(*ground, {11.0f, 0.5f}, b2_staticBody,
@@ -154,7 +154,7 @@ typedef SceneGraph::Scene<
 
 - First call to createBody
 
-```c++
+```cpp
 
 b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
                                  const b2BodyType type,
@@ -164,7 +164,7 @@ b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
 
 ###  8.1. <a name='b2BodyType'></a>b2BodyType
 
-```c++
+```cpp
 
 /// The body type.
 /// static: zero mass, zero velocity, may be manually moved
@@ -180,21 +180,21 @@ enum b2BodyType
 
 ###  8.2. <a name='DualComplex'></a>DualComplex?
 
-```c++
+```cpp
 /** @brief Float dual complex number */
 typedef Math::DualComplex<Float> DualComplex;
 ```
 
 ###  8.3. <a name='DefaultvaluefordensityincreateBody'></a>Default value for density in createBody
 
-```c++
+```cpp
   b2Body *createBody(Object2D &object, const Vector2 &size, b2BodyType type,
                      const DualComplex &transformation, Float density = 1.0f);
 ```
 
 ###  8.4. <a name='CreateBodyDefinition'></a>Create Body Definition
 
-```c++
+```cpp
 b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
                                  const b2BodyType type,
                                  const DualComplex &transformation,
@@ -230,7 +230,7 @@ b2Body *Box2DExample::createBody(Object2D &object, const Vector2 &halfSize,
 
 See call site again
 
-```c++
+```cpp
   createBody(*ground, {11.0f, 0.5f}, b2_staticBody,
              DualComplex::translation(Vector2::yAxis(-8.0f)));
 ```
@@ -239,7 +239,7 @@ Ok so it's setting gravity -8.0f
 
 ####  8.4.1. <a name='b2BodyDef'></a>b2BodyDef
 
-```c++
+```cpp
 /// A body definition holds all the data needed to construct a rigid body.
 /// You can safely re-use body definitions. Shapes are added to a body after construction.
 struct B2_API b2BodyDef
@@ -266,7 +266,7 @@ struct B2_API b2BodyDef
 
 ####  8.4.2. <a name='CreateBody'></a>CreateBody
 
-```c++
+```cpp
 b2Body *body = _world->CreateBody(&bodyDefinition);
   b2PolygonShape shape;
   shape.SetAsBox(halfSize.x(), halfSize.y());
@@ -292,7 +292,7 @@ b2Body *body = _world->CreateBody(&bodyDefinition);
 
 - This is a constexpr Tag defined in Tags.h
 
-```c++
+```cpp
 
 /**
 @brief No creation tag
