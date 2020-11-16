@@ -1,9 +1,11 @@
 <!-- vscode-markdown-toc -->
-* [Links](#Links)
-* [Problem: How to annotate an existing VCF](#Problem:HowtoannotateanexistingVCF)
+* 1. [Links](#Links)
+* 2. [Problem: How to annotate an existing VCF](#Problem:HowtoannotateanexistingVCF)
+* 3. [Problem: Try simple API request](#Problem:TrysimpleAPIrequest)
+* 4. [Mastermind API Cookbook Examples](#MastermindAPICookbookExamples)
 
 <!-- vscode-markdown-toc-config
-	numbering=false
+	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
@@ -39,12 +41,13 @@ MMURI: The Mastermind URL to view and investigate the matched articles.
 ```
 
 
-## <a name='Links'></a>Links
+##  1. <a name='Links'></a>Links
 - [Getting Started API](https://mastermind.genomenon.com/api)
 - [PDF Documentation](https://ss-usa.s3.amazonaws.com/c/308466541/media/149745f74e37d8892253531143959025/MM%20Integration%20-%20Technical%20Documentation%20-%202020%2008%2022.pdf)
+- [MM Api Cookbook](https://github.com/Genomenon/mastermind-api-cookbook)
 
 
-## <a name='Problem:HowtoannotateanexistingVCF'></a>Problem: How to annotate an existing VCF
+##  2. <a name='Problem:HowtoannotateanexistingVCF'></a>Problem: How to annotate an existing VCF
 
 ```
 /file_annotations/counts 
@@ -54,7 +57,7 @@ genomic coordinates with each variant in the output file annotated with the numb
 articles and Mastermind URL for each variant.
 ```
 
-## Problem: Try simple API request
+##  3. <a name='Problem:TrysimpleAPIrequest'></a>Problem: Try simple API request
 
 ```
 curl -H "Content-type: application/json" -H "X-API-TOKEN: [[your API token here]]" -X GET
@@ -62,3 +65,7 @@ curl -H "Content-type: application/json" -H "X-API-TOKEN: [[your API token here]
 ```
 
 Setup with POSTMAN
+
+
+##  4. <a name='MastermindAPICookbookExamples'></a>Mastermind API Cookbook Examples
+- Found this online which is pretty useful [MMAPI Cookbook](https://github.com/Genomenon/mastermind-api-cookbook)
