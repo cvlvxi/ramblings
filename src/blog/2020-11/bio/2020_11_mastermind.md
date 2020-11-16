@@ -3,6 +3,7 @@
 * 2. [Problem: How to annotate an existing VCF](#Problem:HowtoannotateanexistingVCF)
 * 3. [Problem: Try simple API request](#Problem:TrysimpleAPIrequest)
 * 4. [Mastermind API Cookbook Examples](#MastermindAPICookbookExamples)
+* 5. [Errors from their side?](#Errorsfromtheirside)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -69,3 +70,12 @@ Setup with POSTMAN
 
 ##  4. <a name='MastermindAPICookbookExamples'></a>Mastermind API Cookbook Examples
 - Found this online which is pretty useful [MMAPI Cookbook](https://github.com/Genomenon/mastermind-api-cookbook)
+
+These were pretty useful! I made some small changes to their code base as I was experimenting
+
+See [https://github.com/cvlvxi/mastermind-api-cookbook](https://github.com/cvlvxi/mastermind-api-cookbook)
+
+##  5. <a name='Errorsfromtheirside'></a>Errors from their side?
+
+One thing that I did find lacking was an error response that said when things went wrong when state == "failed" 
+
