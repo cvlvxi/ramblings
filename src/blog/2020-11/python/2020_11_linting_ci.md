@@ -4,6 +4,8 @@
 * 3. [Handling no `objects` member](#Handlingnoobjectsmember)
 	* 3.1. [Django Specialty?](#DjangoSpecialty)
 	* 3.2. [Testing, it works!](#Testingitworks)
+* 4. [Automating this with Gitlab CI/CD](#AutomatingthiswithGitlabCICD)
+* 5. [Setup with Github](#SetupwithGithub)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -63,7 +65,7 @@ Your code has been rated at 9.02/10 (previous run: 10.00/10, -0.98)
 Ok cool!
 
 
-## Automating this with Gitlab CI/CD
+##  4. <a name='AutomatingthiswithGitlabCICD'></a>Automating this with Gitlab CI/CD
 
 What's required for getting commit ci/cd running for your target repo is a `.gitlab-ci.yml` file in the root of your repo
 
@@ -84,3 +86,24 @@ test:
     after_script:
         - docker stop bleh 
 ```
+
+-----------------------------------------------------------
+
+##  5. <a name='SetupwithGithub'></a>Setup with Github
+
+- Go to [Travis Website](https://docs.travis-ci.com/user/tutorial/)
+- Setup with github
+- Link to a specific repostitory
+
+<img src="https://imgur.com/qkq1JL6.png"/>
+
+
+- Add a .travis.yml file
+
+Github offers a free service as well let's try the following [here](https://dev.to/edeediong/using-travisci-to-write-better-python-codes-27kg)
+
+Then coolness
+
+- https://travis-ci.com/github/cvlvxi/auto_pylint_on_commit/builds/201881757
+
+- Example Project : [https://github.com/cvlvxi/auto_pylint_on_commit](https://github.com/cvlvxi/auto_pylint_on_commit)
