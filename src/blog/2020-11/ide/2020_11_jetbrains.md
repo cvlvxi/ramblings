@@ -111,3 +111,13 @@ ${defaultBuildTask} - the name of the default build task
   ]
 }
 ```
+
+### Quick Find and replace in file
+
+- Keybind : Select All Occurences Find Match
+- I use ctrl + 2 
+
+<video  controls>
+  <source src="https://imgur.com/ZwbPOH8.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
