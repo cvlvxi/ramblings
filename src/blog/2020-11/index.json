@@ -1,6 +1,14 @@
 {
     "2020-11": [
       {
+      "id": "rust/2020_11_iflet" ,
+      "date": "2020 11 18",
+      "title": "if let on match",
+      "description": "do you let to match on let?",
+      "tags": ["rust"]
+      },
+
+      {
       "id": "rust/2020_11_where",
       "date": "2020 11 18",
       "title": "Where clause",
