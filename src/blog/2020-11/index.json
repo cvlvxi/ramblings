@@ -1,6 +1,13 @@
 {
     "2020-11": [
       {
+      "id": "rust/2020_11_where",
+      "date": "2020 11 18",
+      "title": "Where clause",
+      "description": "Where art thou trait",
+      "tags": ["rust"]
+      },
+      {
       "id": "rust/2020_11_vscode_rust_analyzer" ,
       "date": "2020 11 17",
       "title": "Rust Analyzer + Vscode",
