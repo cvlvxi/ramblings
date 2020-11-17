@@ -20,5 +20,6 @@ export let tags = {
     'shortstory': 'success',
     'tech': 'success',
     'thoughts': 'secondary',
+    'vscode': 'info',
     'wasm': 'danger'
 }
