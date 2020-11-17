@@ -7,6 +7,9 @@
 	* [Layout](#Layout)
 	* [Python Path stuff](#PythonPathstuff)
 	* [Vscode Variables](#VscodeVariables)
+	* [Simple vscode debugging (lldb)](#Simplevscodedebugginglldb)
+	* [Quick Find and replace in file](#QuickFindandreplaceinfile)
+	* [Select just the word that has underscores](#Selectjustthewordthathasunderscores)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -79,7 +82,7 @@ ${execPath} - the path to the running VS Code executable
 ${defaultBuildTask} - the name of the default build task
 ```
 
-### Simple vscode debugging (lldb)
+### <a name='Simplevscodedebugginglldb'></a>Simple vscode debugging (lldb)
 
 - Install CodeLLDB Extension
 - .vscode/launch.json
@@ -112,7 +115,7 @@ ${defaultBuildTask} - the name of the default build task
 }
 ```
 
-### Quick Find and replace in file
+### <a name='QuickFindandreplaceinfile'></a>Quick Find and replace in file
 
 - Keybind : Select All Occurences Find Match
 - I use ctrl + 2 
@@ -121,3 +124,13 @@ ${defaultBuildTask} - the name of the default build task
   <source src="https://imgur.com/ZwbPOH8.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+
+### <a name='Selectjustthewordthathasunderscores'></a>Select just the word that has underscores
+
+- settings.json
+
+```json
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+```
+
+- Now when you select the word it will not include these
