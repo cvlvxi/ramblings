@@ -1,6 +1,13 @@
 {
     "2020-11": [
       {
+      "id": "rust/2020_11_vscode_rust_analyzer" ,
+      "date": "2020 11 17",
+      "title": "Rust Analyzer + Vscode",
+      "description": "Better than the original vscode extension",
+      "tags": ["rust"]
+      },
+      {
       "id": "python/2020_11_linting_ci",
       "date": "2020 11 16",
       "title": "Pylint on commit!",
