@@ -1,6 +1,13 @@
 {
     "2020-11": [
       {
+      "id": "bio/2020_11_cwl1.md" ,
+      "date": "2020 11 18",
+      "title": "CWL's moving castle",
+      "description": "Like howl's moving castle but not really",
+      "tags": ["cwl", "bioinformatics"]
+      },
+      {
       "id": "ide/2020_11_vscode_drawio" ,
       "date": "2020 11 18",
       "title": "Cool Vscode Pluginz: Drawio",
