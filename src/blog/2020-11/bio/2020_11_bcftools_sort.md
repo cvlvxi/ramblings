@@ -18,6 +18,8 @@
 
 # Understanding bcftools sort
 
+All of the stuff I do will be in my own fork: [here](https://github.com/cvlvxi/bcftools)
+
 ##  1. <a name='Prereqs'></a>Prereqs
 
 - Installed htslib (make installed)
@@ -29,6 +31,8 @@
 I'm using compiledb to actually generate the missing `compile_commands.json` file for clangd
 
 See [here](https://github.com/nickdiego/compiledb)
+
+Make sure to run this first: `autoreconf`
 
 Just run make with this wrapped which will target all
 
@@ -128,6 +132,22 @@ Target 0: (bcftools) stopped.
 ```
 
 NICE!
+
+### Intergration with Clion
+
+1. Create a Custom build target (make cmd)
+
+<img src="https://imgur.com/MnkE9w2.png"/>
+
+2. Link the built executable and add the program args
+
+<img src="https://imgur.com/7H1Ud5N.png"/>
+
+3. Now try debug!
+
+<img src="https://imgur.com/zbxQnr1.png"/>
+
+NICE!!!!
 
 
 ##  6. <a name='Howdoessort_mainwork'></a>How does sort_main work?
