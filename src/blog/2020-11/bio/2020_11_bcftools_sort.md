@@ -4,7 +4,10 @@
 * 3. [Structure](#Structure)
 	* 3.1. [Compiling and running](#Compilingandrunning)
 * 4. [Sort Tests?](#SortTests)
-* 5. [How does sort_main work?](#Howdoessort_mainwork)
+* 5. [Can I lldb this?](#CanIlldbthis)
+	* 5.1. [Set break in main](#Setbreakinmain)
+	* 5.2. [Run](#Run)
+* 6. [How does sort_main work?](#Howdoessort_mainwork)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -70,7 +73,64 @@ Sweet.
 
 - Can't find any? Might have to write some of my own I guess..
 
-##  5. <a name='Howdoessort_mainwork'></a>How does sort_main work?
+Test 
+
+```bash
+./bcftools sort -o mytest/sorted.vcf mytest/unsorted.vcf 
+Writing to /tmp/bcftools-sort.JRSJGT
+Merging 1 temporary files
+Cleaning
+Done
+I am here%   
+```
+
+##  5. <a name='CanIlldbthis'></a>Can I lldb this?
+
+
+###  5.1. <a name='Setbreakinmain'></a>Set break in main
+
+```
+➜  bcftools git:(develop) ✗ lldb bcftools 
+Voltron loaded.
+(lldb) target create "bcftools"
+Current executable set to '/path/to/bcftools' (x86_64).
+(lldb) run sort -o mytest/sorted.vcf mytest/unsorted.vcf 
+Process 17544 launched: '/path/to/bcftools' (x86_64)
+Writing to /tmp/bcftools-sort.PvWZtG
+Merging 1 temporary files
+Cleaning
+Done
+I am hereProcess 17544 exited with status = 0 (0x00000000) 
+(lldb) b vcfsort.c:318
+Breakpoint 1: where = bcftools`main_sort + 33 at vcfsort.c:319:31, address = 0x00000001000ae7a1
+(lldb) 
+```
+
+###  5.2. <a name='Run'></a>Run 
+
+```bash
+(lldb) run sort -o mytest/sorted.vcf mytest/unsorted.vcf
+Process 17589 launched: '/path/to/bcftools' (x86_64)
+bcftools was compiled with optimization - stepping may behave oddly; variables may not be available.
+Process 17589 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+    frame #0: 0x00000001000ae7a1 bcftools`main_sort(argc=4, argv=0x00007ffeefbfecd8) at vcfsort.c:319:31 [opt]
+   316  {
+   317      printf("I am here");
+   318      int c;
+-> 319      args_t *args  = (args_t*) calloc(1,sizeof(args_t));
+   320      args->argc    = argc; args->argv = argv;
+   321      args->max_mem = 768*1000*1000;
+   322      args->output_fname = "-";
+Target 0: (bcftools) stopped.
+(lldb) 
+
+```
+
+NICE!
+
+
+##  6. <a name='Howdoessort_mainwork'></a>How does sort_main work?
 
 
 ```c
