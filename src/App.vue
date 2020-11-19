@@ -31,16 +31,38 @@
       </b-dropdown>
       &nbsp;
       <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
-      <input class="roundedInput" v-model="search" placeholder="Search" />
+      <input
+        ref="searchBox"
+        class="roundedInput"
+        v-model="search"
+        placeholder="Search"
+      />
     </b-jumbotron>
     <router-view
       v-if="!this.showAwesome"
       :selected-tag="this.selectedTag"
       :search="this.search"
     />
+    <b-toast id="my-toast" variant="warning" solid autoHideDelay="100">
+      <template #toast-title>
+        <div class="d-flex flex-grow-1 align-items-baseline">
+          <b-img
+            blank
+            blank-color="#ff5555"
+            class="mr-2"
+            width="12"
+            height="12"
+          ></b-img>
+          <strong class="mr-auto">Selected Search</strong>
+          <small class="text-muted mr-2"></small>
+        </div>
+      </template>
+      Search Blog Titles or Description<br />
+      (Case Insensitive)
+    </b-toast>
     <Awesome v-if="this.showAwesome" />
-  </div>
-</template>
+  </div> </template
+>f
 
 <script>
 import { tags } from "./tags.js";
@@ -48,6 +70,17 @@ import Awesome from "./awesome/Awesome";
 
 export default {
   name: "App",
+  mounted() {
+    window.addEventListener("keypress", e => {
+      if (e.key === "f") {
+        let searchBox = this.$refs.searchBox;
+        if (searchBox) {
+          searchBox.focus();
+          this.$bvToast.show("my-toast");
+        }
+      }
+    });
+  },
   components: {
     Awesome
   },
