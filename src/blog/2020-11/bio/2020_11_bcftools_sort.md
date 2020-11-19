@@ -18,6 +18,8 @@
 	* 6.7. [Buff Capacity?](#BuffCapacity)
 	* 6.8. [buf_flush](#buf_flush)
 	* 6.9. [cmp_bcf_pos](#cmp_bcf_pos)
+* 7. [Checkpoint: qsort](#Checkpoint:qsort)
+	* 7.1. [Potential Algorithms](#PotentialAlgorithms)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -424,3 +426,12 @@ we can see the comparison it does iternally...
 3. CHECK ALLELE..
 
 
+##  7. <a name='Checkpoint:qsort'></a>Checkpoint: qsort
+
+- Ok so we can see at this point that we're doing quick sort..
+- Now comes the fun part.. what if we used a different algorithm? 
+
+###  7.1. <a name='PotentialAlgorithms'></a>Potential Algorithms
+
+- Timsort
+- Quadsort
