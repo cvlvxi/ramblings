@@ -18,11 +18,11 @@
 
       <hr class="my-4" />
       <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button>
-      &nbsp; &nbsp;
+      <span class="leftpadding"></span>
       <b-button :href="this.github"
         ><b-icon icon="code-square"></b-icon> Github</b-button
       >
-      &nbsp; &nbsp;
+      <span class="leftpadding"></span>
       <b-button :href="this.youtube">
         <b-icon icon="camera-video"></b-icon> Youtube &nbsp;</b-button
       >
@@ -35,7 +35,9 @@
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
-      &nbsp; <b-button @click="toggleAwesome">Awesome!</b-button>
+      <span class="leftpadding"></span
+      ><b-button @click="toggleAwesome">Awesome!</b-button>
+      <div class="vertpadding"></div>
       <div class="vertpadding"></div>
       <div align="center">
         <b-form-input
@@ -129,8 +131,11 @@ export default {
 .vertpadding {
   padding-top: 10px;
 }
+.leftpadding {
+  padding-left: 2.5px;
+}
 .roundedInput {
-  width: 330px !important;
+  width: 300px !important;
   border-radius: 5px;
 }
 .center {
