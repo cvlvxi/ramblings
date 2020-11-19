@@ -17,10 +17,9 @@
       Day <span style="color:red">{{ this.days_since_stopping }}</span>
 
       <hr class="my-4" />
-
-      <b-button :href="this.github">Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube">Youtube</b-button> <br /><br />
-      <b-button href="/ramblings/">Blog</b-button> &nbsp; &nbsp;
+      <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button> &nbsp; &nbsp; 
+      <b-button :href="this.github"><b-icon icon="code-square"></b-icon>  Github</b-button> &nbsp; &nbsp;
+      <b-button :href="this.youtube"> <b-icon  icon="camera-video"></b-icon> Youtube &nbsp;</b-button> <br />
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
@@ -30,13 +29,14 @@
         </b-dropdown-item>
       </b-dropdown>
       &nbsp;
-      <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
+      <b-button @click="toggleAwesome">Awesome!</b-button><br />
       <input
         ref="searchBox"
         class="roundedInput"
         v-model="search"
         placeholder="Search"
       />
+     
     </b-jumbotron>
     <router-view
       v-if="!this.showAwesome"
@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      stopDate: new Date("11/12/2020"),
+      stopDate: new Date("11/02/2020"),
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
       tagOptions: [],
