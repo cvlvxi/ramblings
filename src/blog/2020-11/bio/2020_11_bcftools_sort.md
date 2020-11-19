@@ -408,3 +408,19 @@ int cmp_bcf_pos(const void *aptr, const void *bptr)
     return 0;
 }
 ```
+
+How it chooses which records is unclear as it's most probably left to qsort...
+
+HOWEVER
+
+we can see the comparison it does iternally...
+
+1. CHROM CHECK
+    - CHROM LEFT < RIGHT? return -1 
+    - CHROM LEFT > RIGHT? return 1
+2. CHECK POSITION
+    - POSITION LEFT < RIGHT? return -1
+    - POSITION LEFT > RIGHT? return 1
+3. CHECK ALLELE..
+
+
