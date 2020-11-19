@@ -1,5 +1,6 @@
 export let tags = {
     'Show all': 'primary',
+    'algorithms': 'info',
     'assembly': 'success',
     'bioinformatics': 'primary',
     'c': 'secondary',

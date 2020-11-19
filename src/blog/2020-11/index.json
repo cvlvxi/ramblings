@@ -1,6 +1,14 @@
 {
     "2020-11": [
       {
+      "id": "algo/2020_11_timsort" ,
+      "date": "2020 11 19",
+      "title": "Timsort",
+      "description": "The Incredible Meta Sorting Algorithm",
+      "tags": ["timsort", "algorithms"]
+      },
+      
+      {
       "id": "gamedev/2020_11_aci_game" ,
       "date": "2020 11 19",
       "title": "ACI",
