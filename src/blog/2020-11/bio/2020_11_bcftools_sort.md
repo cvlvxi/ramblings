@@ -484,5 +484,7 @@ make: *** [me] Error 1
 
 ###  7.5. <a name='Addedquadsortinvcfsort.c'></a>Added quadsort in vcfsort.c
 
-See [This github commit](https://github.com/cvlvxi/bcftools/commit/70bb56ff0551dcd42549ff8757cc9864ca9f2168)
+See [This github commit](https://github.com/cvlvxi/bcftools/commit/d7f003a42b961dfedb4207be55b92041b1246c9e)
+
+We can see some difference in performance around ~ 4seconds for a 4.5Gig VCF file 
 
