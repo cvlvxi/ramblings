@@ -53,6 +53,8 @@ Average:  n^2
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--T4wKuT2f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/dp61xcspsu0wuoqopwub.gif"/>
 
+*Insertion sort visualisation*
+
 ###  3.3. <a name='Mergesort'></a>Mergesort
 
 Worst: nlogn
@@ -60,3 +62,7 @@ Worst: nlogn
 Best: nlogn
 
 Average: nlogn
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--T4wKuT2f--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/dp61xcspsu0wuoqopwub.gif"/>
+
+*Merge sort visualisation*
