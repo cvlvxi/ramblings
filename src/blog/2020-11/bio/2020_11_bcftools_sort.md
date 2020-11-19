@@ -20,6 +20,7 @@
 	* 6.9. [cmp_bcf_pos](#cmp_bcf_pos)
 * 7. [Checkpoint: qsort](#Checkpoint:qsort)
 	* 7.1. [Potential Algorithms](#PotentialAlgorithms)
+	* 7.2. [Where even is qsort?](#Whereevenisqsort)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -435,3 +436,9 @@ we can see the comparison it does iternally...
 
 - Timsort
 - Quadsort
+
+###  7.2. <a name='Whereevenisqsort'></a>Where even is qsort?
+
+Looks like it's part of stdlib.h
+
+See here: [stdlib.h](https://www.tutorialspoint.com/c_standard_library/stdlib_h.htm)
