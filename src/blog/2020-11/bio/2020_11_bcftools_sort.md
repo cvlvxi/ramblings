@@ -22,6 +22,8 @@
 	* 7.1. [Potential Algorithms](#PotentialAlgorithms)
 	* 7.2. [Where even is qsort?](#Whereevenisqsort)
 	* 7.3. [Can I add my own header file into bcftools?](#CanIaddmyownheaderfileintobcftools)
+	* 7.4. [inline issues](#inlineissues)
+	* 7.5. [Added quadsort in vcfsort.c](#Addedquadsortinvcfsort.c)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -476,4 +478,11 @@ make[1]: *** [bcftools] Error 1
 
 make: *** [me] Error 1
 ```
+
+###  7.4. <a name='inlineissues'></a>inline issues
+- There seems to be some issues with using inline functions and C99 and bcftools so I removed them from quadsort
+
+###  7.5. <a name='Addedquadsortinvcfsort.c'></a>Added quadsort in vcfsort.c
+
+See [This github commit](https://github.com/cvlvxi/bcftools/commit/70bb56ff0551dcd42549ff8757cc9864ca9f2168)
 
