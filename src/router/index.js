@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/Home.vue'
+import Awesome from "../awesome/Awesome"
+import ShowCaseHome from "../showcase/ShowCaseHome"
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
       name: 'home',
       component: Home,
       props: true
+    },
+    {
+      path: '/awesome',
+      name: 'awesome',
+      component: Awesome,
+    },
+    {
+      path: '/showcase',
+      name: 'showcase',
+      component: ShowCaseHome
     },
     ...blogRoutes
   ]

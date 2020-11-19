@@ -17,7 +17,9 @@
       Day <span style="color:red">{{ this.days_since_stopping }}</span>
 
       <hr class="my-4" />
-      <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button>
+      <b-button @click="redirectHome()"
+        ><b-icon icon="book"></b-icon> Blog</b-button
+      >
       <span class="leftpadding"></span>
       <b-button :href="this.github"
         ><b-icon icon="code-square"></b-icon> Github</b-button
@@ -28,9 +30,9 @@
       >
       <div class="vertpadding"></div>
       <span class="leftpadding"></span
-      ><b-button @click="toggleAwesome">Awesome</b-button>
+      ><b-button @click="redirectAwesome()">Awesome</b-button>
       <span class="leftpadding"></span>
-      <b-button>Showcase</b-button>
+      <b-button @click="redirectShowcase()">Showcase</b-button>
       <span class="leftpadding"></span>
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
@@ -56,11 +58,7 @@
         <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : F
       </b-tooltip>
     </b-jumbotron>
-    <router-view
-      v-if="!this.showAwesome"
-      :selected-tag="this.selectedTag"
-      :search="this.search"
-    />
+    <router-view :selected-tag="this.selectedTag" :search="this.search" />
     <b-toast id="my-toast" variant="warning" solid autoHideDelay="100">
       <template #toast-title>
         <div class="d-flex flex-grow-1 align-items-baseline">
@@ -78,13 +76,11 @@
       Search Blog Titles or Description<br />
       (Case Insensitive)
     </b-toast>
-    <Awesome v-if="this.showAwesome" />
   </div> </template
 >f
 
 <script>
 import { tags } from "./tags.js";
-import Awesome from "./awesome/Awesome";
 
 export default {
   name: "App",
@@ -98,9 +94,6 @@ export default {
         }
       }
     });
-  },
-  components: {
-    Awesome
   },
   computed: {
     days_since_stopping() {
@@ -118,13 +111,18 @@ export default {
       tagOptions: [],
       tagKeys: Object.keys(tags),
       selectedTag: null,
-      showAwesome: false,
       search: ""
     };
   },
   methods: {
-    toggleAwesome: function() {
-      this.showAwesome = !this.showAwesome;
+    redirectHome() {
+      this.$router.push({ path: "/" });
+    },
+    redirectAwesome() {
+      this.$router.push({ path: "/awesome" });
+    },
+    redirectShowcase() {
+      this.$router.push({ path: "/showcase" });
     }
   }
 };
