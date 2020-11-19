@@ -45,12 +45,16 @@
       <div class="vertpadding"></div>
       <div align="center">
         <b-form-input
+          id="searchBox"
           ref="searchBox"
           class="roundedInput"
           v-model="search"
           placeholder="Search"
         />
       </div>
+      <b-tooltip target="searchBox" triggers="hover">
+        <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : F
+      </b-tooltip>
     </b-jumbotron>
     <router-view
       v-if="!this.showAwesome"
