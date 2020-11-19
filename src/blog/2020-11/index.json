@@ -11,7 +11,7 @@
       "id": "bio/2020_11_bcftools_sort",
       "date": "2020 11 19",
       "title": "Understanding bcftools sort",
-      "description": "Deep dive into bcftools sort for potential customisation",
+      "description": "Can we replace the underlying qsort with quadsort?",
       "tags": ["bioinformatics", "c"]
       },
       
