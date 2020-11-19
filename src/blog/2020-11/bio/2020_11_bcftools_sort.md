@@ -21,6 +21,7 @@
 * 7. [Checkpoint: qsort](#Checkpoint:qsort)
 	* 7.1. [Potential Algorithms](#PotentialAlgorithms)
 	* 7.2. [Where even is qsort?](#Whereevenisqsort)
+	* 7.3. [Can I add my own header file into bcftools?](#CanIaddmyownheaderfileintobcftools)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -434,11 +435,45 @@ we can see the comparison it does iternally...
 
 ###  7.1. <a name='PotentialAlgorithms'></a>Potential Algorithms
 
-- Timsort
-- Quadsort
+- [Timsort](https://github.com/patperry/timsort)
+- [Quadsort](https://github.com/scandum/quadsort)
 
 ###  7.2. <a name='Whereevenisqsort'></a>Where even is qsort?
 
 Looks like it's part of stdlib.h
 
 See here: [stdlib.h](https://www.tutorialspoint.com/c_standard_library/stdlib_h.htm)
+
+
+###  7.3. <a name='CanIaddmyownheaderfileintobcftools'></a>Can I add my own header file into bcftools?
+
+Makefile
+
+```
+
+CUSTOM_SORT_H = customsort/quadsort.h
+...
+
+
+vcfsort.o: vcfsort.c $(htslib_vcf_h) $(htslib_kstring_h) $(htslib_hts_os_h) kheap.h $(bcftools_h) $(CUSTOM_SORT_H)
+```
+
+Error
+
+```
+cd ../htslib && /Applications/Xcode.app/Contents/Developer/usr/bin/make lib-static
+make[2]: Nothing to be done for `lib-static'.
+gcc -rdynamic   -o bcftools main.o vcfindex.o tabix.o vcfstats.o vcfisec.o vcfmerge.o vcfquery.o vcffilter.o filter.o vcfsom.o vcfnorm.o vcfgtcheck.o vcfview.o vcfannotate.o vcfroh.o vcfconcat.o vcfcall.o mcall.o vcmp.o gvcf.o reheader.o convert.o vcfconvert.o tsv2vcf.o vcfcnv.o HMM.o consensus.o ploidy.o bin.o hclust.o version.o regidx.o smpl_ilist.o csq.o vcfbuf.o mpileup.o bam2bcf.o bam2bcf_indel.o bam_sample.o vcfsort.o cols.o extsort.o ccall.o em.o prob1.o kmin.o  vcfplugin.o ../htslib/libhts.a -lz -lm -lbz2 -llzma -lcurl -lm -lz     -lpthread
+Undefined symbols for architecture x86_64:
+  "_tail_insert32", referenced from:
+      _tail_swap32 in vcfsort.o
+  "_tail_insert64", referenced from:
+      _tail_swap64 in vcfsort.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [bcftools] Error 1
+## Building [make]...
+
+make: *** [me] Error 1
+```
+
