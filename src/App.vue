@@ -36,7 +36,10 @@
         </b-dropdown-item>
       </b-dropdown>
       <span class="leftpadding"></span
-      ><b-button @click="toggleAwesome">Awesome!</b-button>
+      ><b-button @click="toggleAwesome">Awesome</b-button>
+      <span class="leftpadding"></span>
+      <b-button>Showcase</b-button>
+
       <div class="vertpadding"></div>
       <div class="vertpadding"></div>
       <div align="center">
