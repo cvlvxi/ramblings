@@ -28,8 +28,7 @@
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
-      &nbsp;
-      <b-button @click="toggleAwesome">Awesome!</b-button><br />
+      <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
       <input
         ref="searchBox"
         class="roundedInput"
