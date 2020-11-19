@@ -19,7 +19,7 @@
       <hr class="my-4" />
       <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button> &nbsp; &nbsp; 
       <b-button :href="this.github"><b-icon icon="code-square"></b-icon>  Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube"> <b-icon  icon="camera-video"></b-icon> Youtube &nbsp;</b-button> <br />
+      <b-button :href="this.youtube"> <b-icon  icon="camera-video"></b-icon> Youtube &nbsp;</b-button> <br /><br/>
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
