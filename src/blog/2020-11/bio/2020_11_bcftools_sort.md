@@ -16,6 +16,8 @@
 	* 6.5. [bcf1_t record struct](#bcf1_trecordstruct)
 	* 6.6. [0-based vs 1-based](#basedvs1-based)
 	* 6.7. [Buff Capacity?](#BuffCapacity)
+	* 6.8. [buf_flush](#buf_flush)
+	* 6.9. [cmp_bcf_pos](#cmp_bcf_pos)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -319,3 +321,90 @@ Ok I figured out why... lldb in `clion only shows a limited amount` to actually 
 ```
 
 which does correspond to a variant further down the list... Phew
+
+###  6.8. <a name='buf_flush'></a>buf_flush
+
+- After processing all variants calls this
+
+```c
+void buf_flush(args_t *args)
+{
+    if ( !args->nbuf ) return;
+
+    qsort(args->buf, args->nbuf, sizeof(*args->buf), cmp_bcf_pos);
+
+    args->nblk++;
+    args->blk = (blk_t*) realloc(args->blk, sizeof(blk_t)*args->nblk);
+    blk_t *blk = args->blk + args->nblk - 1;
+
+    kstring_t str = {0,0,0};
+    ksprintf(&str, "%s/%05d.bcf", args->tmp_dir, (int)args->nblk);
+    blk->fname = str.s;
+    blk->rec   = NULL;
+    blk->fh    = NULL;
+
+    htsFile *fh = hts_open(blk->fname, "wbu");
+    if ( fh == NULL ) clean_files_and_throw(args, "Cannot write %s: %s\n", blk->fname, strerror(errno));
+    if ( bcf_hdr_write(fh, args->hdr)!=0 ) clean_files_and_throw(args, "[%s] Error: cannot write to %s\n", __func__,blk->fname);
+    
+    int i;
+    for (i=0; i<args->nbuf; i++)
+    {
+        if ( bcf_write(fh, args->hdr, args->buf[i])!=0 ) clean_files_and_throw(args, "[%s] Error: cannot write to %s\n", __func__,blk->fname);
+        bcf_destroy(args->buf[i]);
+    }
+    if ( hts_close(fh)!=0 ) clean_files_and_throw(args, "[%s] Error: close failed .. %s\n", __func__,blk->fname);
+
+    args->nbuf = 0;
+    args->mem  = 0;
+}
+```
+
+- qsort see here [https://www.tutorialspoint.com/c_standard_library/c_function_qsort.htm](https://www.tutorialspoint.com/c_standard_library/c_function_qsort.htm)
+
+`void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))`
+
+- base − This is the pointer to the first element of the array to be sorted.
+- nitems − This is the number of elements in the array pointed by base.
+- size − This is the size in bytes of each element in the array.
+- compar − This is the function that compares two elements.
+
+COOL
+
+and our callsite?
+
+```c
+qsort(args->buf, args->nbuf, sizeof(*args->buf), cmp_bcf_pos);
+```
+
+###  6.9. <a name='cmp_bcf_pos'></a>cmp_bcf_pos
+
+We've hit the place where some sorting is happening boiz!!
+
+```c
+int cmp_bcf_pos(const void *aptr, const void *bptr)
+{
+    bcf1_t *a = *((bcf1_t**)aptr);
+    bcf1_t *b = *((bcf1_t**)bptr);
+    if ( a->rid < b->rid ) return -1;
+    if ( a->rid > b->rid ) return 1;
+    if ( a->pos < b->pos ) return -1;
+    if ( a->pos > b->pos ) return 1;
+
+    // Sort the same chr:pos records lexicographically by ref,alt.
+    // This will be called rarely so should not slow the sorting down
+    // noticeably.
+
+    if ( !a->unpacked ) bcf_unpack(a, BCF_UN_STR);
+    if ( !b->unpacked ) bcf_unpack(b, BCF_UN_STR);
+    int i;
+    for (i=0; i<a->n_allele; i++)
+    { 
+        if ( i >= b->n_allele ) return 1;
+        int ret = strcasecmp(a->d.allele[i],b->d.allele[i]);
+        if ( ret ) return ret;
+    }
+    if ( a->n_allele < b->n_allele ) return -1;
+    return 0;
+}
+```
