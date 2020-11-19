@@ -27,6 +27,11 @@
         <b-icon icon="camera-video"></b-icon> Youtube &nbsp;</b-button
       >
       <div class="vertpadding"></div>
+      <span class="leftpadding"></span
+      ><b-button @click="toggleAwesome">Awesome</b-button>
+      <span class="leftpadding"></span>
+      <b-button>Showcase</b-button>
+      <span class="leftpadding"></span>
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
@@ -35,10 +40,6 @@
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
-      <span class="leftpadding"></span
-      ><b-button @click="toggleAwesome">Awesome</b-button>
-      <span class="leftpadding"></span>
-      <b-button>Showcase</b-button>
 
       <div class="vertpadding"></div>
       <div class="vertpadding"></div>
