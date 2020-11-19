@@ -7,7 +7,10 @@
 * 5. [Can I lldb this?](#CanIlldbthis)
 	* 5.1. [Set break in main](#Setbreakinmain)
 	* 5.2. [Run](#Run)
+	* 5.3. [Intergration with Clion](#IntergrationwithClion)
 * 6. [How does sort_main work?](#Howdoessort_mainwork)
+	* 6.1. [sort_blocks](#sort_blocks)
+	* 6.2. [buf_push](#buf_push)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -133,7 +136,7 @@ Target 0: (bcftools) stopped.
 
 NICE!
 
-### Intergration with Clion
+###  5.3. <a name='IntergrationwithClion'></a>Intergration with Clion
 
 1. Create a Custom build target (make cmd)
 
@@ -152,60 +155,66 @@ NICE!!!!
 
 ##  6. <a name='Howdoessort_mainwork'></a>How does sort_main work?
 
+1. init(args)
+2. sort_blocks(args)
+    - Reads the file with hts_open
+
+###  6.1. <a name='sort_blocks'></a>sort_blocks
+
 
 ```c
-int main_sort(int argc, char *argv[])
+void sort_blocks(args_t *args) 
 {
-    printf("I am here");
-    int c;
-    args_t *args  = (args_t*) calloc(1,sizeof(args_t));
-    args->argc    = argc; args->argv = argv;
-    args->max_mem = 768*1000*1000;
-    args->output_fname = "-";
+    htsFile *in = hts_open(args->fname, "r");
+    if ( !in ) clean_files_and_throw(args, "Could not read %s\n", args->fname);
+    args->hdr = bcf_hdr_read(in);
+    if ( !args->hdr) clean_files_and_throw(args, "Could not read VCF/BCF headers from %s\n", args->fname);
 
-    static struct option loptions[] =
+    while ( 1 )
     {
-        {"max-mem",required_argument,NULL,'m'},
-        {"temp-dir",required_argument,NULL,'T'},
-        {"output-type",required_argument,NULL,'O'},
-        {"output-file",required_argument,NULL,'o'},
-        {"output",required_argument,NULL,'o'},
-        {"help",no_argument,NULL,'h'},
-        {0,0,0,0}
-    };
-    while ((c = getopt_long(argc, argv, "m:T:O:o:h?",loptions,NULL)) >= 0)
-    {
-        switch (c)
+        bcf1_t *rec = bcf_init();
+        int ret = bcf_read1(in, args->hdr, rec);
+        if ( ret < -1 ) clean_files_and_throw(args,"Error encountered while parsing the input\n");
+        if ( ret == -1 )
         {
-            case 'm': args->max_mem = parse_mem_string(optarg); break;
-            case 'T': args->tmp_dir = optarg; break;
-            case 'o': args->output_fname = optarg; break;
-            case 'O':
-                      switch (optarg[0]) {
-                          case 'b': args->output_type = FT_BCF_GZ; break;
-                          case 'u': args->output_type = FT_BCF; break;
-                          case 'z': args->output_type = FT_VCF_GZ; break;
-                          case 'v': args->output_type = FT_VCF; break;
-                          default: error("The output type \"%s\" not recognised\n", optarg);
-                      };
-                      break;
-            case 'h':
-            case '?': usage(args); break;
-            default: error("Unknown argument: %s\n", optarg);
+            bcf_destroy(rec);
+            break;
         }
+        if ( rec->errcode ) clean_files_and_throw(args,"Error encountered while parsing the input at %s:%d\n",bcf_seqname(args->hdr,rec),rec->pos+1);
+        buf_push(args, rec);
     }
-
-    if ( optind>=argc )
-    {
-        if ( !isatty(fileno((FILE *)stdin)) ) args->fname = "-";  // reading from stdin
-        else usage(args);
-    }
-    else args->fname = argv[optind];
-
-    init(args);
-    sort_blocks(args);
-    merge_blocks(args);
-    destroy(args);
-
-    return 0;
+    buf_flush(args);
+    free(args->buf);
 ```
+
+- Note key htslib functions called
+- `bcf_hdr_read` reading the vcf header and storing in args->hdr
+- Creates a new rec in the while loop for each row 
+    - When ret is 0 we keep going otherwise we break or destroy
+
+Here we're getting to the meat of the sort
+
+```c
+buf_push(args, rec);
+```
+
+###  6.2. <a name='buf_push'></a>buf_push
+
+```c
+void buf_push(args_t *args, bcf1_t *rec)
+{
+    int delta = sizeof(bcf1_t) + rec->shared.l + rec->indiv.l + sizeof(bcf1_t*);
+    if ( args->mem + delta > args->max_mem ) buf_flush(args);
+    args->nbuf++;
+    args->mem += delta;
+    hts_expand(bcf1_t*, args->nbuf, args->mbuf, args->buf);
+    args->buf[args->nbuf-1] = rec;
+}
+
+```
+
+- Noticing at certain breakpoints can't get the full evaluation context..
+- `CFLAGS=-g -O2`
+- Let's turn Optimisation to `CFLAGS = -g - Wall -O0` in makefile
+
+OK NOW THIS WORKS NICE
