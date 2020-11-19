@@ -11,8 +11,10 @@
 * 6. [How does sort_main work?](#Howdoessort_mainwork)
 	* 6.1. [sort_blocks](#sort_blocks)
 	* 6.2. [buf_push](#buf_push)
-	* 6.3. [args_t *args](#args_targs)
-	* 6.4. [bcf1_t record struct](#bcf1_trecordstruct)
+	* 6.3. [Debugging not working?](#Debuggingnotworking)
+	* 6.4. [args_t *args](#args_targs)
+	* 6.5. [bcf1_t record struct](#bcf1_trecordstruct)
+	* 6.6. [0-based vs 1-based](#basedvs1-based)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -215,13 +217,23 @@ void buf_push(args_t *args, bcf1_t *rec)
 
 ```
 
+So it will calculate the amount of memory to add in delta which is size of a record + the shared and indiv size_t + size of record ptr 
+
+args->nbuf increments (amount of records)
+
+args->mem total memory 
+
+Add to args->buf the record 
+
+###  6.3. <a name='Debuggingnotworking'></a>Debugging not working? 
+
 - Noticing at certain breakpoints can't get the full evaluation context..
 - `CFLAGS=-g -O2`
 - Let's turn Optimisation to `CFLAGS = -g - Wall -O0` in makefile
 
 OK NOW THIS WORKS NICE
 
-###  6.3. <a name='args_targs'></a>args_t *args
+###  6.4. <a name='args_targs'></a>args_t *args
 
 This is passed all over the place ... what is it?
 
@@ -247,7 +259,7 @@ args_t;
 
 Let's not forget what `bcf1_t` is for a record
 
-###  6.4. <a name='bcf1_trecordstruct'></a>bcf1_t record struct
+###  6.5. <a name='bcf1_trecordstruct'></a>bcf1_t record struct
 
 ```c
 typedef struct bcf1_t {
@@ -265,3 +277,10 @@ typedef struct bcf1_t {
     int errcode;    // one of BCF_ERR_* codes
 } bcf1_t;
 ```
+
+
+###  6.6. <a name='basedvs1-based'></a>0-based vs 1-based
+
+<img src="https://imgur.com/btv2ZNS.png"/>
+
+This may be entirely obvious but you can see that the VCF file displays 1 based counting vs bcftools / htslib has the position at 0 based counting
