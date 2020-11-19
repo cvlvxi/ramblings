@@ -17,9 +17,16 @@
       Day <span style="color:red">{{ this.days_since_stopping }}</span>
 
       <hr class="my-4" />
-      <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button> &nbsp; &nbsp; 
-      <b-button :href="this.github"><b-icon icon="code-square"></b-icon>  Github</b-button> &nbsp; &nbsp;
-      <b-button :href="this.youtube"> <b-icon  icon="camera-video"></b-icon> Youtube &nbsp;</b-button> <br /><br/>
+      <b-button href="/ramblings/"><b-icon icon="book"></b-icon> Blog</b-button>
+      &nbsp; &nbsp;
+      <b-button :href="this.github"
+        ><b-icon icon="code-square"></b-icon> Github</b-button
+      >
+      &nbsp; &nbsp;
+      <b-button :href="this.youtube">
+        <b-icon icon="camera-video"></b-icon> Youtube &nbsp;</b-button
+      >
+      <br /><br />
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
@@ -27,15 +34,16 @@
           :key="tagKey"
           >{{ tagKey }}
         </b-dropdown-item>
-      </b-dropdown> &nbsp;
-      <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
-      <input
-        ref="searchBox"
-        class="roundedInput"
-        v-model="search"
-        placeholder="Search"
-      />
-     
+      </b-dropdown>
+      &nbsp; <b-button @click="toggleAwesome">Awesome!</b-button><br /><br />
+      <div align="center">
+        <b-form-input
+          ref="searchBox"
+          class="roundedInput"
+          v-model="search"
+          placeholder="Search"
+        />
+      </div>
     </b-jumbotron>
     <router-view
       v-if="!this.showAwesome"
@@ -118,6 +126,7 @@ export default {
   }
 }
 .roundedInput {
+  width: 38% !important;
   border-radius: 5px;
 }
 .center {
