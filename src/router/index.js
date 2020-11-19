@@ -21,7 +21,7 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
 })
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {
