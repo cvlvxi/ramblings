@@ -26,6 +26,7 @@
       <b-button :href="this.youtube">
         <b-icon icon="camera-video"></b-icon> Youtube &nbsp;</b-button
       >
+      <div class="vertpadding"></div>
       <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
         <b-dropdown-item
           @click="selectedTag = tagKey"
@@ -34,6 +35,7 @@
           >{{ tagKey }}
         </b-dropdown-item>
       </b-dropdown>
+      &nbsp; <b-button @click="toggleAwesome">Awesome!</b-button>
       <div class="vertpadding"></div>
       <div align="center">
         <b-form-input
@@ -128,7 +130,7 @@ export default {
   padding-top: 10px;
 }
 .roundedInput {
-  width: 400px !important;
+  width: 330px !important;
   border-radius: 5px;
 }
 .center {
