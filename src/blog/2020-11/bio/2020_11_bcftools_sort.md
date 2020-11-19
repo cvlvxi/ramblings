@@ -11,6 +11,7 @@
 * 6. [How does sort_main work?](#Howdoessort_mainwork)
 	* 6.1. [sort_blocks](#sort_blocks)
 	* 6.2. [buf_push](#buf_push)
+	* 6.3. [args_t *args](#args_targs)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -218,3 +219,27 @@ void buf_push(args_t *args, bcf1_t *rec)
 - Let's turn Optimisation to `CFLAGS = -g - Wall -O0` in makefile
 
 OK NOW THIS WORKS NICE
+
+###  6.3. <a name='args_targs'></a>args_t *args
+
+This is passed all over the place ... what is it?
+
+```c
+ args_t *args  = (args_t*) calloc(1,sizeof(args_t));
+```
+
+where
+
+```c
+typedef struct _args_t
+{
+    bcf_hdr_t *hdr;
+    char **argv, *fname, *output_fname, *tmp_dir;
+    int argc, output_type;
+    size_t max_mem, mem;
+    bcf1_t **buf;
+    size_t nbuf, mbuf, nblk;
+    blk_t *blk;
+}
+args_t;
+```
