@@ -15,6 +15,7 @@
 	* 6.4. [args_t *args](#args_targs)
 	* 6.5. [bcf1_t record struct](#bcf1_trecordstruct)
 	* 6.6. [0-based vs 1-based](#basedvs1-based)
+	* 6.7. [Buff Capacity?](#BuffCapacity)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -284,3 +285,37 @@ typedef struct bcf1_t {
 <img src="https://imgur.com/btv2ZNS.png"/>
 
 This may be entirely obvious but you can see that the VCF file displays 1 based counting vs bcftools / htslib has the position at 0 based counting
+
+Interestingly this also applies to rid aka CHROM
+
+<img src="https://imgur.com/iei4WDz.png"/>
+
+
+###  6.7. <a name='BuffCapacity'></a>Buff Capacity?
+
+Look here
+
+<img src="https://imgur.com/oAkXjEv.png"/>
+
+You can see buf has 14 elements.. but we've passed the number since there are > 14 variants so what's going on???
+
+Ok I figured out why... lldb in `clion only shows a limited amount` to actually see more you can do this in the lldb console..
+
+```bash
+(lldb) v *args->buf[20]
+(bcf1_t) *args->buf[20] = {
+  pos = 219418536
+  rlen = 1
+  rid = 1
+  qual = 1065.77002
+  n_info = 17
+  n_allele = 2
+  n_fmt = 5
+  n_sample = 1
+  shared = (l = 114, m = 151, s = "\x97rs1318299\x17A\x17G")
+  indiv = (l = 27, m = 40, s = "\x11\x05!\x04\x04\x11\x02!")
+  d = {
+    m_fmt = 0
+```
+
+which does correspond to a variant further down the list... Phew
