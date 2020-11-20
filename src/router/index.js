@@ -7,6 +7,25 @@ import ShowCaseHome from "../showcase/ShowCaseHome"
 Vue.use(Router)
 
 import { BlogEntries } from '../blog/blog.js';
+import { ShowCaseEntries } from '../showcase/showcase.js'
+
+
+let showCaseRoutes = []
+
+for(let [section, entries] of Object.entries(ShowCaseEntries)) {
+  for (let entry of entries) {
+    const child = {
+      path: `/showcase/${section}/${entry.id}`,
+      name: entry.id,
+      component: () => entry.component,
+      props: entry.props
+    }
+    showCaseRoutes.push(child)
+  }
+}
+
+console.log(showCaseRoutes)
+
 
 const blogRoutes = Object.keys(BlogEntries).map(section => {
   const children = BlogEntries[section].map(child => ({
@@ -40,8 +59,10 @@ export default new Router({
     {
       path: '/showcase',
       name: 'showcase',
-      component: ShowCaseHome
+      component: ShowCaseHome,
+      props: true
     },
-    ...blogRoutes
+    ...blogRoutes,
+    ...showCaseRoutes
   ]
 })

@@ -116,13 +116,13 @@ export default {
   },
   methods: {
     redirectHome() {
-      this.$router.push({ path: "/" });
+      this.$router.push({ path: "/" }).catch(() => {});
     },
     redirectAwesome() {
-      this.$router.push({ path: "/awesome" });
+      this.$router.push({ path: "/awesome" }).catch(() => {});
     },
     redirectShowcase() {
-      this.$router.push({ path: "/showcase" });
+      this.$router.push({ path: "/showcase" }).catch(() => {});
     }
   }
 };

@@ -1,55 +1,138 @@
 <template>
-  <div class="showcase">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
-        </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input
-              size="sm"
-              class="mr-sm-2"
-              placeholder="Search"
-            ></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit"
-              >Search</b-button
-            >
-          </b-nav-form>
-
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template #button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+  <div class="home">
+    <div class="sections">
+      <div
+        v-for="(section, index) in Object.keys(entries)"
+        :key="index"
+        class="group"
+      >
+        <h2 class="center">{{ section }}</h2>
+        <div class="section" v-for="entry in entries[section]" :key="entry.id">
+          <div class="entry">
+            <h3 @click="$router.push({ path: `/showcase/${section}/${entry.id}`})">
+              {{ entry.title }}
+              <span class="subtitle">{{ entry.date }}</span
+              ><br />
+              <div v-for="tag in entry.tags" :key="tag">
+                <b-badge class="subtitle" pill :variant="tagObj[tag]"
+                  >{{ tag }}
+                </b-badge>
+              </div>
+            </h3>
+            <p>{{ entry.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { ShowCaseEntries } from "./showcase.js";
+import { tags } from "../tags.js"
+import { compare } from "../utils.js";
+export default {
+  name: "showcase",
+  props: ["selectedTag", "search"],
+  data() {
+    return {
+      tagObj: tags
+    }
+  },
+  computed: {
+    entries() {
+      // Order all the entries by date
+      let ordered_entries = {};
+      for (let k of Object.keys(ShowCaseEntries).sort((a, b) => compare(a, b))) {
+        if (this.selectedTag === null || this.selectedTag === "Show all") {
+          ordered_entries[k] = ShowCaseEntries[k].sort((a, b) =>
+            compare(a.date, b.date)
+          );
+        } else {
+          ordered_entries[k] = ShowCaseEntries[k]
+            .filter(x => x.tags.includes(this.selectedTag))
+            .sort((a, b) => compare(a, b));
+        }
+      }
+      if (this.search !== "") {
+        let filtered_entries = {};
+        for (let [key, objList] of Object.entries(ordered_entries)) {
+          filtered_entries[key] = objList.filter(
+            x =>
+              x.date.includes(this.search) ||
+              x.title.toLowerCase().includes(this.search.toLowerCase()) ||
+              x.description.toLowerCase().includes(this.search.toLowerCase()) ||
+              x.tags.includes(this.search)
+          );
+        }
+        ordered_entries = filtered_entries;
+      }
+      return ordered_entries;
+    }
+  }
+
+};
 </script>
 
 <style lang="scss" scoped>
-.showcase {
+
+.center {
+  text-align: center;
+}
+.headline {
+  text-transform: uppercase;
+  margin: 4rem auto;
+  font-size: 4rem;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+h1 {
+  color: #42b883;
+}
+
+h2 {
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #42b883;
+  margin-bottom: 0;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  .subtitle {
+    color: white;
+    font-size: 0.98rem;
+    float: right;
+    font-weight: normal;
+  }
+}
+
+p {
+  margin-top: 0.4rem;
+  color: white;
+}
+
+.sections {
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.group {
+  margin-bottom: 4rem;
 }
 </style>
