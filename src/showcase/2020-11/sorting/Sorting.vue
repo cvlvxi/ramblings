@@ -1,18 +1,13 @@
 <template>
   <div>
-      <b-calendar block locale="en-US"></b-calendar>
+    <b-calendar block locale="en-US"></b-calendar>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    console.log("I AM HERE");
-  }
+  mounted() {}
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
-  
+<style lang="scss" scoped></style>

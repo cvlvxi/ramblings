@@ -5,7 +5,6 @@ import Awesome from "../awesome/Awesome"
 import ShowCaseHome from "../showcase/ShowCaseHome"
 import Sorting from "../showcase/2020-11/sorting/Sorting"
 
-console.log(Sorting)
 
 Vue.use(Router)
 
@@ -26,8 +25,6 @@ for(let [section, entries] of Object.entries(ShowCaseEntries)) {
     showCaseRoutes.push(child)
   }
 }
-
-console.log(showCaseRoutes)
 
 
 const blogRoutes = Object.keys(BlogEntries).map(section => {

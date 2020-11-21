@@ -14,7 +14,11 @@
         Ramble: First Blog Part <span style="color: red">II</span>
       </template>
       <br />
-      Day <span style="color:red">{{ this.days_since_stopping }}</span>
+      <span @click="showCalender = !showCalender"
+        ><b-icon icon="calendar2-date" /> Day</span
+      >
+      <span class="leftpadding"></span>
+      <span style="color:red">{{ this.days_since_stopping }}</span>
 
       <hr class="my-4" />
       <b-button @click="redirectHome()"
@@ -58,6 +62,7 @@
         <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : F
       </b-tooltip>
     </b-jumbotron>
+    <Calender v-if="showCalender" />
     <router-view :selected-tag="this.selectedTag" :search="this.search" />
     <b-toast id="my-toast" variant="warning" solid autoHideDelay="100">
       <template #toast-title>
@@ -81,9 +86,13 @@
 
 <script>
 import { tags } from "./tags.js";
+import Calender from "./calender/Calender";
 
 export default {
   name: "App",
+  components: {
+    Calender
+  },
   mounted() {
     window.addEventListener("keypress", e => {
       if (e.key === "f") {
@@ -105,6 +114,7 @@ export default {
   },
   data() {
     return {
+      showCalender: false,
       stopDate: new Date("11/02/2020"),
       github: "https://github.com/cvlvxi",
       youtube: "https://www.youtube.com/channel/UCPO09wwR62bd4ovPjtcl3WQ",
