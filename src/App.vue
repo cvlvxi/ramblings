@@ -8,8 +8,7 @@
       border-variant="dark"
       class="center"
     >
-      <h1>RAMBLINGS</h1>
-
+      <Logo /> <br />
       <template>
         Ramble: First Blog Part <span style="color: red">II</span>
       </template>
@@ -38,7 +37,13 @@
       <span class="leftpadding"></span>
       <b-button @click="redirectShowcase()">Showcase</b-button>
       <span class="leftpadding"></span>
-      <b-dropdown split id="dropdown-1" text="Tags" class="m-md-2">
+      <b-dropdown
+        ref="tagDropDown"
+        split
+        id="dropdown-1"
+        text="Tags"
+        class="m-md-2"
+      >
         <b-dropdown-item
           @click="selectedTag = tagKey"
           v-for="tagKey in tagKeys"
@@ -59,7 +64,7 @@
         />
       </div>
       <b-tooltip target="searchBox" triggers="hover">
-        <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : F
+        <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : /
       </b-tooltip>
     </b-jumbotron>
     <Calender v-if="showCalender" />
@@ -81,26 +86,60 @@
       Search Blog Titles or Description<br />
       (Case Insensitive)
     </b-toast>
+
+    <b-toast id="tag-toast" variant="warning" solid autoHideDelay="100">
+      <template #toast-title>
+        <div class="d-flex flex-grow-1 align-items-baseline">
+          <b-img
+            blank
+            blank-color="#ff5555"
+            class="mr-2"
+            width="12"
+            height="12"
+          ></b-img>
+          <strong class="mr-auto">Tags Selected</strong>
+          <small class="text-muted mr-2"></small>
+        </div>
+      </template>
+      Filter Blog by tags<br />
+    </b-toast>
   </div> </template
 >f
 
 <script>
+import Logo from "./components/Logo";
 import { tags } from "./tags.js";
 import Calender from "./calender/Calender";
 
 export default {
   name: "App",
   components: {
-    Calender
+    Calender,
+    Logo
   },
   mounted() {
     window.addEventListener("keypress", e => {
-      if (e.key === "f") {
-        let searchBox = this.$refs.searchBox;
-        if (searchBox) {
-          searchBox.focus();
-          this.$bvToast.show("my-toast");
+      switch (e.key) {
+        case "/": {
+          let searchBox = this.$refs.searchBox;
+          if (searchBox) {
+            searchBox.focus();
+            this.$bvToast.show("my-toast");
+            e.preventDefault();
+          }
+          break;
         }
+        case "\\": {
+          let tagDropDown = this.$refs.tagDropDown;
+          if (tagDropDown) {
+            tagDropDown.show();
+            this.$bvToast.show("tag-toast");
+            e.preventDefault();
+          }
+          break;
+        }
+        default:
+          break;
       }
     });
   },
