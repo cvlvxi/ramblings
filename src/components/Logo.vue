@@ -134,7 +134,6 @@ export default {
       easing: "easeInOutSine",
       duration: 1500,
       delay: function(el, i) {
-        console.log(i);
         return i * 250;
       },
       direction: "alternate",
