@@ -9,7 +9,11 @@
         <h2 class="center">{{ section }}</h2>
         <div class="section" v-for="entry in entries[section]" :key="entry.id">
           <div class="entry">
-            <h3 @click="$router.push({ path: `/showcase/${section}/${entry.id}`})">
+            <h3
+              @click="
+                $router.push({ path: `/showcase/${section}/${entry.id}` })
+              "
+            >
               {{ entry.title }}
               <span class="subtitle">{{ entry.date }}</span
               ><br />
@@ -29,7 +33,7 @@
 
 <script>
 import { ShowCaseEntries } from "./showcase.js";
-import { tags } from "../tags.js"
+import { tags } from "../tags.js";
 import { compare } from "../utils.js";
 export default {
   name: "showcase",
@@ -37,13 +41,15 @@ export default {
   data() {
     return {
       tagObj: tags
-    }
+    };
   },
   computed: {
     entries() {
       // Order all the entries by date
       let ordered_entries = {};
-      for (let k of Object.keys(ShowCaseEntries).sort((a, b) => compare(a, b))) {
+      for (let k of Object.keys(ShowCaseEntries).sort((a, b) =>
+        compare(a, b)
+      )) {
         if (this.selectedTag === null || this.selectedTag === "Show all") {
           ordered_entries[k] = ShowCaseEntries[k].sort((a, b) =>
             compare(a.date, b.date)
@@ -70,12 +76,10 @@ export default {
       return ordered_entries;
     }
   }
-
 };
 </script>
 
 <style lang="scss" scoped>
-
 .center {
   text-align: center;
 }

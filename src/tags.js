@@ -8,6 +8,7 @@ export let tags = {
     'cmake': 'danger',
     'food': 'warning',
     'gamedev': 'danger',
+    'js': 'success',
     'ide': 'info',
     'logic': 'warning',
     'lldb': 'info',

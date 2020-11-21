@@ -1,6 +1,25 @@
 {
     "2020-11": [
       {
+        "id": "js/2020_11_anime" ,
+        "date": "2020 11 21",
+        "title": "Tsundere Ramblings",
+        "description": "Using anime.js to update the ramblings logo",
+        "tags": ["js"],
+        "component": null,
+        "props": false
+      },
+      {
+        "id": "js/2020_11_wasm" ,
+        "date": "2020 11 21",
+        "title": "wasm + rambling",
+        "description": "Embed ramblings with wasm",
+        "tags": ["wasm", "js"],
+        "component": null,
+        "props": false
+      },
+      
+      {
       "id": "algo/2020_11_timsort" ,
       "date": "2020 11 19",
       "title": "Timsort",

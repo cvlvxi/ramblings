@@ -1,4 +1,3 @@
-import Sorting from "./sorting/Sorting";
 
 export let ShowCase_2020_11 = {
     "2020-11": [
@@ -8,7 +7,7 @@ export let ShowCase_2020_11 = {
                 "title": "Sorting",
                 "description": "Sorting Algos",
                 "tags": ["algorithms"],
-                "component": Sorting,
+                "component": import('./sorting/Sorting'),
                 "props": false
             },
         ]
