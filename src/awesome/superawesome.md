@@ -1,44 +1,18 @@
-<!-- vscode-markdown-toc -->
-* [Awesome Lists](#AwesomeLists)
-* [C++](#C)
-	* [Alternative Std Libs](#AlternativeStdLibs)
-	* [Package Management](#PackageManagement)
-	* [Static Analysis](#StaticAnalysis)
-	* [CLI](#CLI)
-	* [Other](#Other)
-	* [Parallel/Async](#ParallelAsync)
-	* [Cmake](#Cmake)
-	* [Blogs](#Blogs)
-* [Algorithms](#Algorithms)
-	* [String Match](#StringMatch)
-* [Bioinformatics](#Bioinformatics)
-* [Javscript](#Javscript)
-	* [Visualization](#Visualization)
-	* [VueJS](#VueJS)
-* [Groovy](#Groovy)
-* [Python](#Python)
-* [Rust](#Rust)
-* [Music](#Music)
-* [Podcasts](#Podcasts)
-* [Youtube](#Youtube)
+  <b-jumbotron       bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Awesome Lists" lead="Curated Lists of Awesome Lists">
+  </b-jumbotron>
 
-<!-- vscode-markdown-toc-config
-	numbering=false
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
-
-
-<b-alert show variant="primary">Awesome Lists</b-alert>
-
-## <a name='AwesomeLists'></a>Awesome Lists
 - [Awesome CheatSheets](https://github.com/detailyang/awesome-cheatsheet#platforms)
 
 -----------------------------------------------------------
 
-<b-alert show variant="secondary">C++</b-alert>
 
-## <a name='C'></a>C++
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="C++" lead="Collection of C++ links">
+  </b-jumbotron>
+
 
 
 ### <a name='AlternativeStdLibs'></a>Alternative Std Libs
@@ -75,19 +49,25 @@
 
 -----------------------------------------------------------
 
-<b-alert show variant="success">Algorithms</b-alert>
 
-## <a name='Algorithms'></a>Algorithms 
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Algrorithms" lead="Collection of Algorithm Links">
+  </b-jumbotron>
+
+
 
 ### <a name='StringMatch'></a>String Match
 - [Fast bit vector algorithm for string match](http://www.gersteinlab.org/courses/452/09-spring/pdf/Myers.pdf)
 
 -----------------------------------------------------------
 
-  <b-alert show variant="danger">Bioinformatics</b-alert>
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Bioinformatics" lead="Collection of Bioinformatics Links">
+  </b-jumbotron>
 
 
-## <a name='Bioinformatics'></a>Bioinformatics 
 - [Whatshap](https://whatshap.readthedocs.io/en/latest/develop.html)
 - [Seq](https://docs.seq-lang.org/)
 - [OpenGene](https://github.com/OpenGene)
@@ -95,9 +75,13 @@
 
 -----------------------------------------------------------
 
-<b-alert show variant="warning">Javascript</b-alert>
 
-## <a name='Javscript'></a>Javscript
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Javascript" lead="Collection of Javascript Links">
+  </b-jumbotron>
+
+
 ### <a name='Visualization'></a>Visualization
 - [D3 Examples 1](https://bl.ocks.org/mbostock)
 
@@ -106,39 +90,57 @@
 
 -----------------------------------------------------------
 
-<b-alert show variant="info">Groovy</b-alert>
 
-## <a name='Groovy'></a>Groovy
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Groovy" lead="Collection of Groovy Links">
+  </b-jumbotron>
+
+
 - [Mr Hakis Groovy Blog](https://blog.mrhaki.com/)
 
 -----------------------------------------------------------
 
-<b-alert show variant="light">Python</b-alert>
 
-## <a name='Python'></a>Python
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Python" lead="Collection of Python Links">
+  </b-jumbotron>
+
 - [Python vs Cython vs C](https://notes-on-cython.readthedocs.io/en/latest/std_dev.html)
 
 
 -----------------------------------------------------------
 
- <b-alert show variant="dark">Rust</b-alert>
+
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Rust" lead="Collection of Rust Links">
+  </b-jumbotron>
 
 
-## <a name='Rust'></a>Rust
 - [Bevy: Game Engine](https://bevyengine.org/learn/book/introduction/)
 
 -----------------------------------------------------------
 
-<b-alert show variant="primary">Music</b-alert>
 
-## <a name='Music'></a>Music
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Music" lead="Collection of Music Links">
+  </b-jumbotron>
+
+
 - [The best song ever](https://www.youtube.com/watch?v=7lhJ0LZtv3w&feature=youtu.be)
 
 -----------------------------------------------------------
 
- <b-alert show variant="secondary">Podcast</b-alert>
 
-## <a name='Podcasts'></a>Podcasts
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Podcasts" lead="Collection of Podcasts Links">
+  </b-jumbotron>
+
+
 - [CppCast](https://www.youtube.com/channel/UCuCjADS4u3uJDTqUaG0H9dA)
 - [Lex Fridman](https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA)
 - [Lawrence Krauss - The Origins Podcast](https://www.youtube.com/channel/UCdXsq_0BeYE5OHnrKuFGhHA)
@@ -155,7 +157,10 @@
 
 -----------------------------------------------------------
 
-<b-alert show variant="success">Youtube</b-alert>
 
-## <a name='Youtube'></a>Youtube
+  <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Youtube" lead="Collection of Youtube Links">
+  </b-jumbotron>
+
  - [C++ Weekly](https://www.youtube.com/user/lefticus1)
