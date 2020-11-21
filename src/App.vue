@@ -66,6 +66,9 @@
       <b-tooltip target="searchBox" triggers="hover">
         <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : /
       </b-tooltip>
+      <b-tooltip target="dropdown-1" triggers="hover">
+        <b-icon icon="keyboard" scale="2"></b-icon> &nbsp; &nbsp; : \
+      </b-tooltip>
     </b-jumbotron>
     <Calender v-if="showCalender" />
     <router-view :selected-tag="this.selectedTag" :search="this.search" />
@@ -83,7 +86,7 @@
           <small class="text-muted mr-2"></small>
         </div>
       </template>
-      Search Blog Titles or Description<br />
+      Search Title or Description<br />
       (Case Insensitive)
     </b-toast>
 
@@ -101,7 +104,7 @@
           <small class="text-muted mr-2"></small>
         </div>
       </template>
-      Filter Blog by tags<br />
+      Filter tags<br />
     </b-toast>
   </div> </template
 >f
