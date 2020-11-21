@@ -1,0 +1,5 @@
+# Building
+
+```
+wasm-pack build
+```

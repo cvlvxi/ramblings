@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <b-calendar block locale="en-US"></b-calendar>
+  <div align="center" style="color: white">
+  This is running via rust / wasm 
+      <button id="play-pause"></button>
+    <div id="fps"></div>
+    <canvas id="game-of-life-canvas"></canvas>
   </div>
 </template>
 
 <script>
 export default {
   async mounted() {
-    let rustwasm = await import("./hello-wasm/pkg/hello_wasm.js");
-    rustwasm.greet("Hello From Rust Wasm");
+    await import("./index.js");
   }
 };
 </script>
