@@ -9,10 +9,6 @@
       class="center"
     >
       <Logo /> <br />
-      <template>
-        Ramble: First Blog Part <span style="color: red">II</span>
-      </template>
-      <br />
       <span @click="showCalender = !showCalender"
         ><b-icon icon="calendar2-date" /> Day</span
       >
