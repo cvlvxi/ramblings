@@ -128,9 +128,7 @@ import animejs from "animejs";
 export default {
   mounted() {
     let path = document.getElementsByTagName("path")[5];
-    var offset = animejs.setDashoffset(path);
-    console.log(offset);
-    let dog = animejs({
+    animejs({
       targets: path,
       strokeDashoffset: [animejs.setDashoffset, 0],
       easing: "easeInOutSine",
@@ -142,7 +140,6 @@ export default {
       direction: "alternate",
       loop: true
     });
-    console.log(dog);
   }
 };
 </script>
