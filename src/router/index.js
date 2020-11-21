@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from '../components/Home.vue'
 import Awesome from "../awesome/Awesome"
 import ShowCaseHome from "../showcase/ShowCaseHome"
-import Sorting from "../showcase/2020-11/sorting/Sorting"
 
 
 Vue.use(Router)
@@ -61,12 +60,6 @@ export default new Router({
       name: 'showcase',
       component: ShowCaseHome,
       props: true
-    },
-    {
-      path: '/sorting',
-      name: 'sorting',
-      component: Sorting,
-      props: false
     },
     ...blogRoutes,
     ...showCaseRoutes
