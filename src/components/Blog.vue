@@ -1,7 +1,10 @@
 <template>
   <div class="blog">
     <router-view />
+    <div align="center">
     <router-link to="/" tag="a" class="back">&laquo; Back</router-link>
+    </div>
+    <br/>
   </div>
 </template>
 <script>
