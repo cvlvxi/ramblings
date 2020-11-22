@@ -38,7 +38,7 @@
 
   <b-jumbotron bg-variant="dark"
       text-variant="white"
-      border-variant="dark" header="Algrorithms" lead="Collection of Algorithm Links">
+      border-variant="dark" header="Algorithms" lead="Collection of Algorithm Links">
   </b-jumbotron>
 
 
@@ -58,6 +58,7 @@
 - [Web GPU Samples](https://austineng.github.io/webgpu-samples/?wgsl=0#helloTriangle)
 - [AustinEng](https://github.com/austinEng)
 - [WGSL](https://gpuweb.github.io/gpuweb/wgsl.html#builtin-variables)
+- [BabylonJS: WebGPU](https://doc.babylonjs.com/advanced_topics/webGPU)
 
 -----------------------------------------------------------
 
@@ -71,6 +72,9 @@
 - [Seq](https://docs.seq-lang.org/)
 - [OpenGene](https://github.com/OpenGene)
 - [Groovy NGS Utils](https://github.com/ssadedin/groovy-ngs-utils)
+- [Common Workflow Language](https://www.commonwl.org/#Getting_Started)
+- [CWL Airflow](https://github.com/Barski-lab/cwl-airflow)
+- [Apache Airflow](https://airflow.apache.org/docs/stable/start.html)
 
 -----------------------------------------------------------
 

@@ -8,6 +8,7 @@
 	* 5.2. [Swap chain](#Swapchain)
 	* 5.3. [Pipeline](#Pipeline)
 	* 5.4. [Shaders](#Shaders)
+* 6. [BabylonJS  + WebGPU](#BabylonJSWebGPU)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -173,3 +174,9 @@ fn main() -> void {
 };
 
 ```
+
+
+##  6. <a name='BabylonJSWebGPU'></a>BabylonJS  + WebGPU
+- [https://doc.babylonjs.com/advanced_topics/webGPU](https://doc.babylonjs.com/advanced_topics/webGPU)
+- [https://github.com/BabylonJS/Babylon.js/issues/6443](https://github.com/BabylonJS/Babylon.js/issues/6443)
+- [https://playground.babylonjs.com/indexWebGPU.html](https://playground.babylonjs.com/indexWebGPU.html)
