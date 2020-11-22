@@ -164,3 +164,15 @@
   </b-jumbotron>
 
  - [C++ Weekly](https://www.youtube.com/user/lefticus1)
+
+ -----------------------------------------------------------
+
+   <b-jumbotron bg-variant="dark"
+      text-variant="white"
+      border-variant="dark" header="Blogs" lead="Collection of interesting blogs">
+  </b-jumbotron>
+
+- [Will Usher](https://www.willusher.io/blog)
+- [Mat Palm](http://matpalm.com/blog/)
+- [Tristan Penman](https://tristanpenman.com/blog/)
+
