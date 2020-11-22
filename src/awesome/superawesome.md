@@ -62,6 +62,19 @@
 
 -----------------------------------------------------------
 
+<b-jumbotron bg-variant="dark"
+    text-variant="white"
+    border-variant="dark" header="GPU" lead="GPU Related Links">
+</b-jumbotron>
+
+- [shaderc: A collection of tools, libraries, and tests for Vulkan shader compilation.](https://github.com/google/shaderc)
+- [https://www.willusher.io/graphics/2020/06/15/0-to-gltf-triangle](https://www.willusher.io/graphics/2020/06/15/0-to-gltf-triangle)
+- [GPUWeb Implementations](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status)
+- [https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web](https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web)
+- [Web GPU Samples](https://austineng.github.io/webgpu-samples/?wgsl=0#helloTriangle)
+
+-----------------------------------------------------------
+
   <b-jumbotron bg-variant="dark"
       text-variant="white"
       border-variant="dark" header="Bioinformatics" lead="Collection of Bioinformatics Links">

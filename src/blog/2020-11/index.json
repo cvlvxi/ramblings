@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "js/2020_11_webgpu_intro" ,
+        "date": "2020 11 22",
+        "title": "Intro to WebGPU",
+        "description": "Not quite vulkan",
+        "tags": ["gamedev", "js"],
+        "component": null,
+        "props": false
+      },
+      {
         "id": "js/2020_11_anime" ,
         "date": "2020 11 21",
         "title": "Tsundere Ramblings",
