@@ -109,6 +109,33 @@ context: `gpupresent`
   });
 ```
 
+Using the pipeline
+
+```js
+  function frame() {
+    const commandEncoder = device.createCommandEncoder();
+    const textureView = swapChain.getCurrentTexture().createView();
+
+    const renderPassDescriptor: GPURenderPassDescriptor = {
+      colorAttachments: [
+        {
+          attachment: textureView,
+          loadValue: { r: 0.0, g: 0.0, b: 0.0, a: 1.0 },
+        },
+      ],
+    };
+
+    const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
+    passEncoder.setPipeline(pipeline);
+    passEncoder.draw(3, 1, 0, 0);
+    passEncoder.endPass();
+
+    device.defaultQueue.submit([commandEncoder.finish()]);
+  }
+
+  return frame;
+```
+
 
 ###  5.4. <a name='Shaders'></a>Shaders
 
