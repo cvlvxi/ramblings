@@ -2,6 +2,12 @@
 * 1. [Links](#Links)
 * 2. [Get Chrome Canary](#GetChromeCanary)
 * 3. [Do the examples work?](#Dotheexampleswork)
+* 4. [Canvas Targetting](#CanvasTargetting)
+* 5. [Initalisation](#Initalisation)
+	* 5.1. [Setup Adapter and Device](#SetupAdapterandDevice)
+	* 5.2. [Swap chain](#Swapchain)
+	* 5.3. [Pipeline](#Pipeline)
+	* 5.4. [Shaders](#Shaders)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -31,3 +37,112 @@ Go to [chrome://flags/#enable-unsafe-webgpu](chrome://flags/#enable-unsafe-webgp
 ##  3. <a name='Dotheexampleswork'></a>Do the examples work? 
 
 - https://austineng.github.io/webgpu-samples/?wgsl=0#helloTriangle
+
+##  4. <a name='CanvasTargetting'></a>Canvas Targetting
+
+We can use webgpu and target the canvas similar to webgl / webgl2
+
+context: `gpupresent`
+
+```js
+    const canvas = document.createElement('canvas');
+	const context = canvas.getContext("gpupresent");
+```
+
+##  5. <a name='Initalisation'></a>Initalisation
+
+###  5.1. <a name='SetupAdapterandDevice'></a>Setup Adapter and Device
+
+```js
+  const adapter = await navigator.gpu.requestAdapter();
+  const device = await adapter.requestDevice();
+  const glslang = await glslangModule();
+```
+
+- See [docs](https://gpuweb.github.io/gpuweb/#adapters)
+
+###  5.2. <a name='Swapchain'></a>Swap chain
+
+```js
+  const swapChainFormat = "bgra8unorm";
+
+  const swapChain = context.configureSwapChain({
+    device,
+    format: swapChainFormat,
+  });
+```
+
+###  5.3. <a name='Pipeline'></a>Pipeline
+
+```js
+  const pipeline = device.createRenderPipeline({
+    vertexStage: {
+      module: useWGSL
+        ? device.createShaderModule({
+            code: wgslShaders.vertex,
+          })
+        : device.createShaderModule({
+            code: glslShaders.vertex,
+            transform: (glsl) => glslang.compileGLSL(glsl, "vertex"),
+          }),
+      entryPoint: "main",
+    },
+    fragmentStage: {
+      module: useWGSL
+        ? device.createShaderModule({
+            code: wgslShaders.fragment,
+          })
+        : device.createShaderModule({
+            code: glslShaders.fragment,
+            transform: (glsl) => glslang.compileGLSL(glsl, "fragment"),
+          }),
+      entryPoint: "main",
+    },
+
+    primitiveTopology: "triangle-list",
+
+    colorStates: [
+      {
+        format: swapChainFormat,
+      },
+    ],
+  });
+```
+
+
+###  5.4. <a name='Shaders'></a>Shaders
+
+- We can use wgsl or glsl shaders
+- wgsl shader's are 'rust like' and look something like this
+
+
+```js
+
+export const wgslShaders = {
+  vertex: `
+const pos : array<vec2<f32>, 3> = array<vec2<f32>, 3>(
+    vec2<f32>(0.0, 0.5),
+    vec2<f32>(-0.5, -0.5),
+    vec2<f32>(0.5, -0.5));
+
+[[builtin(position)]] var<out> Dog : vec4<f32>;
+[[builtin(vertex_idx)]] var<in> VertexIndex : i32;
+
+[[stage(vertex)]]
+fn main() -> void {
+  Dog = vec4<f32>(pos[VertexIndex], 0.0, 1.0);
+  return;
+}
+`,
+  fragment: `
+[[location(0)]] var<out> outColor : vec4<f32>;
+
+[[stage(fragment)]]
+fn main() -> void {
+  outColor = vec4<f32>(1.0, 0.0, 0.0, 1.0);
+  return;
+}
+`,
+};
+
+```

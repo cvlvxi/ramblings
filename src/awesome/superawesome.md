@@ -57,6 +57,7 @@
 - [https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web](https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web)
 - [Web GPU Samples](https://austineng.github.io/webgpu-samples/?wgsl=0#helloTriangle)
 - [AustinEng](https://github.com/austinEng)
+- [WGSL](https://gpuweb.github.io/gpuweb/wgsl.html#builtin-variables)
 
 -----------------------------------------------------------
 
