@@ -1,6 +1,15 @@
 {
     "2020-11": [
       {
+        "id": "bio/2020_11_abacbs" ,
+        "date": "2020 11 24",
+        "title": "ABACBS",
+        "description": "ABACBS 2020 Summary",
+        "tags": ["bioinformatics"],
+        "component": null,
+        "props": false
+      },
+      {
         "id": "js/2020_11_d3_vuejs" ,
         "date": "2020 11 24",
         "title": "D3 + Vuejs",
