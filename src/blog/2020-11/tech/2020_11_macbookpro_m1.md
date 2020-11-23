@@ -15,13 +15,6 @@
 
 Let's do some research as to what's compatible, specs, reviews etc 
 
-##  1. <a name='NativeCompatible'></a>Native Compatible 
-- Jetbrains
-
-##  2. <a name='VirtualisationCompatible'></a>Virtualisation Compatible
-
-##  3. <a name='Incompatible'></a>Incompatible 
-- Docker
-
-##  4. <a name='Accessories'></a>Accessories
-- What's the best dongle usb c to use? 
+# Links
+- [https://www.youtube.com/watch?v=ji9j-JWbgAo](https://www.youtube.com/watch?v=ji9j-JWbgAo)
+- [Native Compatibility ARM vs Virtualisation vs Not Supported](https://www.anandtech.com/show/16252/mac-mini-apple-m1-tested/2)

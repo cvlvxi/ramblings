@@ -1,8 +1,17 @@
 {
     "2020-11": [
       {
+        "id": "js/2020_11_d3_vuejs" ,
+        "date": "2020 11 24",
+        "title": "D3 + Vuejs",
+        "description": "Data Driven Documents + VueJS",
+        "tags": ["js"],
+        "component": null,
+        "props": false
+      },
+      {
         "id": "tech/2020_11_macbookpro_m1" ,
-        "date": "2020 11 13",
+        "date": "2020 11 23",
         "title": "First Gen M1 MBP",
         "description": "To get or not to get... hmm",
         "tags": ["tech"],
