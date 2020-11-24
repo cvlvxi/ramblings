@@ -2,7 +2,9 @@
 * 1. [Links](#Links)
 * 2. [Intro](#Intro)
 * 3. [viewof](#viewof)
-* 4. [Keyboard Shortcuts](#KeyboardShortcuts)
+* 4. [Importing other notebooks](#Importingothernotebooks)
+* 5. [Viewing a html svg notebook](#Viewingahtmlsvgnotebook)
+* 6. [Keyboard Shortcuts](#KeyboardShortcuts)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -58,7 +60,7 @@ bob  // Value is whatever you put in the input
 - Instead of using Generator.input(bob) the `viewof` primitive yields access to the current input
 
 
-## Importing other notebooks
+##  4. <a name='Importingothernotebooks'></a>Importing other notebooks
 
 This imports from a different notebook
 
@@ -66,7 +68,7 @@ This imports from a different notebook
 import {viewof selection as cars} from "@d3/brushable-scatterplot"
 ```
 
-## Viewing a html svg noteboko
+##  5. <a name='Viewingahtmlsvgnotebook'></a>Viewing a html svg notebook
 
 - Make sure to hit the ... and `edit` to see the entire cell
 
@@ -117,7 +119,7 @@ viewof selection = {
 ```
 
 
-##  4. <a name='KeyboardShortcuts'></a>Keyboard Shortcuts
+##  6. <a name='KeyboardShortcuts'></a>Keyboard Shortcuts
 - [https://observablehq.com/@observablehq/keyboard-shortcuts](https://observablehq.com/@observablehq/keyboard-shortcuts)
 - Alt (Option) + del to delete cell
 - Shift Cmd + Enter = Insert before cell
