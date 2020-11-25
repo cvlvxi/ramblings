@@ -123,3 +123,25 @@ viewof selection = {
 - [https://observablehq.com/@observablehq/keyboard-shortcuts](https://observablehq.com/@observablehq/keyboard-shortcuts)
 - Alt (Option) + del to delete cell
 - Shift Cmd + Enter = Insert before cell
+
+## Creating Objects
+
+- Needs parenthesis
+
+```
+({top: 20, right: 20, bottom: 30, left: 40})
+```
+
+
+## Reactivity!
+
+```
+letters = { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); }
+```
+
+(This looks identical to a standard JavaScript assignment, but it’s not—it’s reactive! More on that in a bit.) Here’s another cell named letters:
+
+the linear order of cells doesn't matter! Observable notebooks update reactively any time a cell's value changes,
+
+# Embedding into a webapp
+- You can embed your graphs as iframes really easily! pretty cool 
