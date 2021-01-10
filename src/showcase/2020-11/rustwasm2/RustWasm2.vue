@@ -1,6 +1,5 @@
 <template>
-  <div align="center" style="color: white">
-  </div>
+  <div align="center" style="color: white"></div>
 </template>
 
 <script>
