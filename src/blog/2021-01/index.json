@@ -8,6 +8,15 @@
         "tags": ["gfx"],
         "component": null,
         "props": false
+      },
+      {
+        "id": "other/2021_01/intro" ,
+        "date": "2021 01 10",
+        "title": "Welcome to 2021",
+        "description": "🥳",
+        "tags": ["other"],
+        "component": null,
+        "props": false
       }
     ]
 }
