@@ -1,11 +1,13 @@
 <template>
-  <div align="center" style="color: white"></div>
+    <div>
+        <canvas id="mycanvas"></canvas>
+    </div>
 </template>
 
 <script>
 export default {
   async mounted() {
-    await import("./index.js");
+      await import("./app.js");
   }
 };
 </script>

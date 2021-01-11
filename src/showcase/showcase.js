@@ -1,6 +1,5 @@
-import { ShowCase_2020_11 } from './2020-11/index.js';
-
+import { ShowCase_2021_01 } from "./2021-01/index.js";
 
 export let ShowCaseEntries = {
-    ...ShowCase_2020_11,
-}
+  ...ShowCase_2021_01,
+};

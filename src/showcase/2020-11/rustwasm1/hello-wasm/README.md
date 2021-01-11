@@ -1,5 +1,0 @@
-# Building
-
-```
-wasm-pack build
-```
