@@ -61,7 +61,7 @@ const dirlight = Object.assign(
   dirlightBase,
 );
 
-const SIDE = 64;
+const SIDE = 128;
 
 // Make a cube with 65K instances and attributes to control offset and color of each instance
 class InstancedCube extends Model {
