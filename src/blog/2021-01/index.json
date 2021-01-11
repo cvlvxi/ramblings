@@ -1,6 +1,15 @@
 {
     "2021-01": [
       {
+        "id": "gfx/2021_01_lumagl_01",
+        "date": "2021 01 11",
+        "title": "Luma.GL",
+        "description": "Understanding GFX: luma.gl",
+        "tags": ["gfx"],
+        "component": null,
+        "props": false
+      },
+      {
         "id": "gfx/2021_01_webgl2_01",
         "date": "2021 01 10",
         "title": "WebGL2",
