@@ -12,7 +12,6 @@ import {
   picking as pickingBase,
 } from "@luma.gl/shadertools";
 import { Matrix4, radians } from "math.gl";
-import { instrumentGLContext } from "@luma.gl/gltools";
 
 const INFO_HTML = `
   <p>
@@ -277,10 +276,3 @@ function pickInstance(gl, pickX, pickY, model, framebuffer) {
     });
   }
 }
-
-const canvas = document.getElementById("helloworld");
-canvas.width = 800;
-canvas.height = 600;
-const gl = instrumentGLContext(canvas.getContext("webgl"));
-const animationLoop = new AppAnimationLoop({ gl: gl });
-animationLoop.start({ canvas: "helloworld" });

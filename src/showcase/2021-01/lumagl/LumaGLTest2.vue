@@ -5,9 +5,22 @@
 </template>
 
 <script>
+import AppAnimationLoop from "./app2.js";
+import { instrumentGLContext } from "@luma.gl/gltools";
 export default {
   async mounted() {
-    await import("./app2.js");
+    const canvas = document.getElementById("helloworld");
+    let gl = instrumentGLContext(canvas.getContext("webgl"));
+    this.animationLoop = new AppAnimationLoop({ gl: gl });
+    this.animationLoop.start({ canvas: "helloworld" });
+  },
+  destroyed() {
+    this.animationLoop.stop();
+  },
+  data() {
+    return {
+      animationLoop: null
+    };
   }
 };
 </script>
