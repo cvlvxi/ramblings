@@ -1,5 +1,6 @@
 <template>
   <div class="all">
+    <canvas id="backgroundcanvas"></canvas>
     <b-jumbotron
       header=""
       header-tag=""
@@ -116,7 +117,8 @@ export default {
     Calender,
     Logo
   },
-  mounted() {
+  async mounted() {
+    await import("./backgrounds/lines.js");
     window.addEventListener("keypress", e => {
       switch (e.key) {
         case "/": {
@@ -197,15 +199,22 @@ export default {
 }
 
 .all {
-  background-color: #1a1110;
+  background-color: #1a1110ff;
   height: 100%;
 }
 body {
-  height: 100%;
+  height: 0%;
 }
 
 html {
   background-color: #1a1110;
   height: 100%;
+}
+
+#backgroundcanvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -2;
 }
 </style>
