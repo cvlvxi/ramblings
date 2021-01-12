@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <canvas id="backgroundcanvas"></canvas>
+    <!-- <canvas id="backgroundcanvas"></canvas> -->
     <b-jumbotron
       header=""
       header-tag=""
@@ -118,7 +118,7 @@ export default {
     Logo
   },
   async mounted() {
-    await import("./backgrounds/lines.js");
+    //await import("./backgrounds/lines.js");
     window.addEventListener("keypress", e => {
       switch (e.key) {
         case "/": {
