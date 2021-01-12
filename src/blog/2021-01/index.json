@@ -5,7 +5,7 @@
         "date": "2021 01 11",
         "title": "Vulkan",
         "description": "Understanding GFX: Vulkan",
-        "tags": ["gfx"],
+        "tags": ["gfx", "c++"],
         "component": null,
         "props": false
       },
@@ -14,7 +14,7 @@
         "date": "2021 01 11",
         "title": "Luma.GL",
         "description": "Understanding GFX: luma.gl",
-        "tags": ["gfx"],
+        "tags": ["gfx", "js"],
         "component": null,
         "props": false
       },
@@ -23,7 +23,7 @@
         "date": "2021 01 10",
         "title": "WebGL2",
         "description": "Understanding GFX: WebGL2",
-        "tags": ["gfx"],
+        "tags": ["gfx", "js"],
         "component": null,
         "props": false
       },
