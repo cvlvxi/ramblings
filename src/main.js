@@ -6,8 +6,8 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import VuePrism from "vue-prism";
-import VueZoomer from "vue-zoomer";
-Vue.use(VueZoomer);
+import PinchZoom from "vue-pinch-zoom";
+Vue.component("pinch-zoom", PinchZoom);
 Vue.use(VuePrism);
 
 import "prismjs/components/prism-python";
